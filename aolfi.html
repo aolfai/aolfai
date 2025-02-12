@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon Event</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Previous styles */
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+        }
+        
+        /* Added modal and project tile styles */
+        .project-tile {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            border-radius: 12px;
+            padding: 30px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow-y: auto;
+        }
+
+        .modal-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: #666;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header Section -->
+    <header class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <img src="/api/placeholder/300/200" alt="Left Event Image" class="rounded-lg shadow-lg mb-4 md:mb-0">
+                <div class="text-center md:mx-8">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">TechnovateX 2025</h1>
+                    <p class="text-xl mb-2">March 15-16, 2025</p>
+                    <p class="text-xl">Silicon Valley Convention Center</p>
+                </div>
+                <img src="/api/placeholder/300/200" alt="Right Event Image" class="rounded-lg shadow-lg mt-4 md:mt-0">
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">About the Hackathon</h2>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                Join us for TechnovateX 2025, a 48-hour innovation marathon where talented developers, designers, and entrepreneurs come together to create groundbreaking solutions. With mentorship from industry leaders, workshops, and amazing prizes worth $50,000, this is your chance to turn your ideas into reality.
+            </p>
+        </div>
+    </section>
+
+    <!-- Project Ideas Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Project Ideas</h2>
+            <div class="project-container"></div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-header">
+                <h1 id="modal-title" class="text-3xl font-bold mb-4"></h1>
+                <p class="text-lg mb-2">Team: <span id="modal-team"></span></p>
+                <p class="text-lg mb-4">Lead: <span id="modal-lead"></span></p>
+            </div>
+            <div class="mb-6">
+                <h2 class="text-xl font-bold mb-2">Description</h2>
+                <p id="modal-description" class="text-gray-700"></p>
+            </div>
+            <div class="mb-6">
+                <h2 class="text-xl font-bold mb-2">Project Details</h2>
+                <p id="modal-details" class="text-gray-700"></p>
+            </div>
+            <div class="mb-6">
+                <h2 class="text-xl font-bold mb-2">Solutions</h2>
+                <p id="modal-solutions" class="text-gray-700"></p>
+            </div>
+            <a id="join-button" href="#" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors" target="_blank">Join the Team</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">TechnovateX 2025</h3>
+                    <p>Innovation Begins Here</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-gray-300">Contact</a>
+                    <a href="#" class="hover:text-gray-300">Register</a>
+                    <a href="#" class="hover:text-gray-300">Sponsors</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const projects = [
+            {
+                title: "AI-Powered Process Automation",
+                team: "Future Innovators",
+                lead: "Alex Johnson",
+                description: "Revolutionary AI system automating complex business processes with advanced machine learning algorithms.",
+                details: "Our flagship AI automation system represents the cutting edge of process automation technology. It leverages deep learning and natural language processing to understand and optimize complex business workflows. The system adapts to specific industry needs while maintaining high security standards and compliance requirements.",
+                solutions: "Customizable workflow automation solutions with real-time analytics and performance monitoring. Seamless integration with existing systems and scalable architecture for enterprise-level deployment.",
+                joinLink: "https://forms.gle/form1"
+            }
+        ];
+
+        const industries = ["Healthcare", "Finance", "Education", "Transportation", "Manufacturing", "Retail", "Energy", "Technology", "Security", "Communication"];
+        const technologies = ["Blockchain", "IoT", "AR/VR", "Robotics", "Cloud Computing", "5G", "Edge Computing", "Big Data", "Machine Learning", "Cybersecurity"];
+        const leads = ["Emma Watson", "Michael Zhang", "Sofia Rodriguez", "James Kim", "Laura Chen", "David Patel", "Maria Garcia", "Tom Anderson", "Priya Shah", "Marcus Lee"];
+
+        while (projects.length < 25) {
+            const index = projects.length + 1;
+            const industry = industries[Math.floor(Math.random() * industries.length)];
+            const tech = technologies[Math.floor(Math.random() * technologies.length)];
+            const lead = leads[Math.floor(Math.random() * leads.length)];
+            
+            projects.push({
+                title: `${industry} ${tech} Innovation`,
+                team: `${industry} Innovation Team`,
+                lead: lead,
+                description: `Next-generation ${tech} solution for ${industry.toLowerCase()} sector, focusing on digital transformation and operational excellence.`,
+                details: `Leading-edge ${tech} implementation in ${industry.toLowerCase()}, addressing critical challenges and opportunities. Our solution provides comprehensive capabilities for process optimization, data analysis, and secure operations.`,
+                solutions: `Enterprise-grade ${tech} platform with industry-specific features. Scalable architecture and robust security measures.`,
+                joinLink: `https://forms.gle/form${index}`
+            });
+        }
+
+        function displayProjects() {
+            const container = document.querySelector(".project-container");
+            container.innerHTML = "";
+            container.style.display = "grid";
+            container.style.gridTemplateColumns = "repeat(auto-fill, minmax(300px, 1fr))";
+            container.style.gap = "20px";
+            container.style.padding = "20px";
+
+            projects.forEach((project, index) => {
+                let projectTile = document.createElement("div");
+                projectTile.classList.add("project-tile");
+                projectTile.innerHTML = `
+                    <h3 class="text-xl font-bold mb-3">${project.title}</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">${project.description}</p>
+                    <button onclick="openModal(${index})" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">Learn More</button>
+                `;
+                container.appendChild(projectTile);
+            });
+        }
+
+        function openModal(index) {
+            const project = projects[index];
+            document.getElementById("modal-title").textContent = project.title;
+            document.getElementById("modal-team").textContent = project.team;
+            document.getElementById("modal-lead").textContent = project.lead;
+            document.getElementById("modal-description").textContent = project.description;
+            document.getElementById("modal-details").textContent = project.details;
+            document.getElementById("modal-solutions").textContent = project.solutions;
+            document.getElementById("join-button").href = project.joinLink;
+            document.getElementById("modal").style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        window.onclick = function(event) {
+            if (event.target === document.getElementById("modal")) {
+                closeModal();
+            }
+        };
+
+        window.onload = displayProjects;
+    </script>
+</body>
+</html>
