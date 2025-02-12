@@ -223,12 +223,12 @@
         const projects = [
             {
                 title: "AI-Powered Process Automation",
-                team: "Future Innovators",
-                lead: "Alex Johnson",
-                description: "Revolutionary AI system automating complex business processes with advanced machine learning algorithms.",
-                details: "Our flagship AI automation system represents the cutting edge of process automation technology. It leverages deep learning and natural language processing to understand and optimize complex business workflows. The system adapts to specific industry needs while maintaining high security standards and compliance requirements.",
-                solutions: "Customizable workflow automation solutions with real-time analytics and performance monitoring. Seamless integration with existing systems and scalable architecture for enterprise-level deployment.",
-                joinLink: "https://forms.gle/form1"
+                team: "Abhishek Ratna",
+                contact: " ",
+                description: "Bring intelligent marketing automation to automate market research and content creation so every teacher and volunteer can attract and engage audiences effortlessly.",
+                detailspro: "Art of Living teachers and volunteers. Pains:\n1. Lack marketing skills to systematically research local markets and create content/messaging that engages local audiences\n 2. Lack time and skills to create quality marketing content that can be distributed across marketing channels, and so they end up creating amateurish, poor content that doesn't convert. 3. Lack an understanding of best practices for different channels to create channel-appropriate content 4. Fail to generate leads and attract new audiences 5. Are stuck waiting for marketing resources to become available, and such resources are hard to find 6. Art of Living programs have a distinct tone of voice and Gurudev's wisdom must be reflected with dignity. Generic ChatGPT prompts cannot create this.",
+                solutions: "One click marketing studio where teachers/volunteers simply input the URL of their workshop and instantly have access to high quality marketing collateral and campaign assets to use across multiple channels.",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
             }
         ];
 
@@ -247,7 +247,7 @@
                 team: `${industry} Innovation Team`,
                 lead: lead,
                 description: `Next-generation ${tech} solution for ${industry.toLowerCase()} sector, focusing on digital transformation and operational excellence.`,
-                details: `Leading-edge ${tech} implementation in ${industry.toLowerCase()}, addressing critical challenges and opportunities. Our solution provides comprehensive capabilities for process optimization, data analysis, and secure operations.`,
+                problemstatement: `Leading-edge ${tech} implementation in ${industry.toLowerCase()}, addressing critical challenges and opportunities. Our solution provides comprehensive capabilities for process optimization, data analysis, and secure operations.`,
                 solutions: `Enterprise-grade ${tech} platform with industry-specific features. Scalable architecture and robust security measures.`,
                 joinLink: `https://forms.gle/form${index}`
             });
@@ -277,9 +277,9 @@
             const project = projects[index];
             document.getElementById("modal-title").textContent = project.title;
             document.getElementById("modal-team").textContent = project.team;
-            document.getElementById("modal-lead").textContent = project.lead;
+           /* document.getElementById("modal-lead").textContent = project.lead;*/
             document.getElementById("modal-description").textContent = project.description;
-            document.getElementById("modal-details").textContent = project.details;
+            document.getElementById("modal-details").textContent = project.problemstatement;
             document.getElementById("modal-solutions").textContent = project.solutions;
             document.getElementById("join-button").href = project.joinLink;
             document.getElementById("modal").style.display = "block";
