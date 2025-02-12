@@ -97,7 +97,7 @@
         .hero-bg {
             background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url('https://github.com/aolfai/aolfai/blob/main/gurudevai-bgk.png?raw=true');
             background-size: cover;
-            background-position: right center;
+            background-position: center;
            /* background-attachment:fixed;*/
         }
         
@@ -114,56 +114,33 @@
         .bg-blue-600{
         	background-color:#FF7E00;
         }
-        
-        
-        
-        /* Desktop styles */
-        @media (min-width: 768px) {
-            .hero-bg {
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                           url('https://github.com/aolfai/aolfai/blob/main/gurudevai-bgk.png?raw=true');
-                background-size: cover;
-                background-position: right center;
-            }
-        }
-
-        /* Mobile styles */
-        @media (max-width: 767px) {
-            .hero-bg {
-                background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), 
-                           url('https://github.com/aolfai/aolfai/blob/main/gurudevai-bgk.png?raw=true');
-                background-size: contain;
-                background-position: center 120px;
-                background-repeat: no-repeat;
-                padding-top: 60vh; /* Space for the image */
-            }
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50">
 
 
-      <!-- Header -->
-    <header class="fixed w-full z-50">
+     <!-- Header -->
+     <header class="fixed w-full z-50">
         <nav class="glass-nav py-4">
-            <div class="container mx-auto px-6">
-                <!-- Mobile: Center logo and text -->
-                <div class="flex flex-col md:flex-row items-center justify-between">
-                    <div class="flex flex-col md:flex-row items-center">
-                        <img src="https://www.artofliving.org/img/ic-logo.svg" alt="Logo" class="h-16 md:h-12 mb-2 md:mb-0">
-                        <span class="text-white font-bold text-xl md:ml-3">AI Meets AI</span>
-                    </div>
-                    
-                    <div class="hidden md:flex items-center space-x-8 mt-4 md:mt-0">
-                        <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">Contact</a>
-                    </div>
-                    
-                    <button class="md:hidden absolute right-6 top-6 text-white">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
-                    </button>
+            <div class="container mx-auto px-6 flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="https://www.artofliving.org/img/ic-logo.svg" alt="Logo" class="h-30 w-30">
+                    <span class="ml-3 text-white font-bold text-xl">AI Meets AI</span>
                 </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                   <!-- <a href="#" class="text-white hover:text-blue-200 transition-colors">Home</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition-colors">Schedule</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition-colors">Speakers</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition-colors">Sponsors</a>-->
+                    <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">Contact</a>
+                </div>
+                
+                <button class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
             </div>
         </nav>
     </header>
@@ -171,28 +148,15 @@
     <!-- Hero Section -->
     <section class="hero-bg min-h-screen flex items-center">
         <div class="container mx-auto px-6">
-            <div class="max-w-2xl mx-auto md:mx-0">
-                <!-- Mobile: Text appears below the background image -->
-                <div class="text-center md:text-left">
-                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">AI Meet AI - 2025</h1>
-                    <div class="event-date mb-8">
-                        <p class="text-2xl md:text-3xl text-white font-bold">May 13-14, 2025</p>
-                        <p class="text-lg md:text-xl text-white font-bold mt-2">Seattle, WA</p>
-                    </div>
-                    <p class="text-lg md:text-xl text-white font-normal mb-8">Join the biggest tech innovation event of the year. Two days of coding, creativity, and breakthrough solutions.</p>
-                    <a href="#ideas" class="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors inline-block">Join the team</a>
-                </div>
+            <div class="max-w-2xl">
+                <h1 class="text-6xl font-bold text-white mb-4">AI Meet AI - 2025</h1>
+                <!--<div class="event-date mb-8">
+                    <p class="text-3xl text-blue-300 font-light">May 13-14, 2025</p>
+                    <p class="text-xl text-gray-300 mt-2">Seattle, WA</p>
+                </div>-->
+                <p class="text-xl text-gray-200 mb-8">Step Into the Future of Transformation ✨ A Day of Innovation, Insight & Inner Connection through AI</p>
+                <a href="#ideas" class="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors inline-block">Join the team</a>
             </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="py-16 bg-white" id="ideas">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-8 text-center">About the Hackathon</h2>
-            <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
-                The Art of Living presents the Hackathon for Mental Health, bringing together passionate minds to create AI-driven solutions that promote mental well-being, accessibility, and emotional resilience. From intelligent chatbots to innovative stress-relief tools, let's harness the power of technology for a healthier mind and a brighter future. 🚀 Join us in shaping the future of mental health through innovation!
-            </p>
         </div>
     </section>
 
@@ -213,7 +177,22 @@
         </div>
     </header>-->
 
-   
+    <!-- About Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">About the Hackathon</h2>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                <div id="ideas"></div> The Art of Living Presents: AI Demo Day ✨💡<br><br>
+
+<p>Join us for a transformative journey where technology meets well-being! The AI Demo Day unites passionate minds to create AI-driven solutions to address pain points in Art of Living including supporting teachers, lead generation, handling misinformation, better recommendations of AOL content, and more!</p><br>
+
+<p>From intelligent chatbots, Social Media for good AI agents, to AI Teacher assistants and more, let’s harness AI to accelerate the impact of Art of Living for everyone 🚀</p><br>
+
+<p>Be part of the movement shaping the future of mental health through AI-driven innovation!<br>
+
+            </p>
+        </div>
+    </section>
 
     <!-- Project Ideas Section -->
   
@@ -271,24 +250,85 @@
 
             /*PROEJECT 1*/
             {
-                title: "AI-Powered Process Automation",
-                team: "Abhishek Ratna",
+                title: "AI Volunteer: Student care through AI automation [Art of Living AI]",
+                team: "Apoorva Acharya,",
                 /*contact: " ",*/
-                description: "Bring intelligent marketing automation to automate market research and content creation so every teacher and volunteer can attract and engage audiences effortlessly.",
-                problemstatement: "Art of Living teachers and volunteers. Pains:\n1. Lack marketing skills to systematically research local markets and create content/messaging that engages local audiences\n 2. Lack time and skills to create quality marketing content that can be distributed across marketing channels, and so they end up creating amateurish, poor content that doesn't convert. 3. Lack an understanding of best practices for different channels to create channel-appropriate content 4. Fail to generate leads and attract new audiences 5. Are stuck waiting for marketing resources to become available, and such resources are hard to find 6. Art of Living programs have a distinct tone of voice and Gurudev's wisdom must be reflected with dignity. Generic ChatGPT prompts cannot create this.",
-                solutions: "One click marketing studio where teachers/volunteers simply input the URL of their workshop and instantly have access to high quality marketing collateral and campaign assets to use across multiple channels.",
+                description: "Our mission is to empower teachers with AI-driven automation and voice support, enabling them to efficiently engage with students, gain insights into their progress, and foster a supportive environment. By streamlining communication and providing a personalized experience, we aim to significantly enhance student care and overall engagement.By transforming the traditional engagement approach which is often one student at a time, teachers are empowered to reach multiple students simultaneously, achieving an order of magnitude increase in efficiency.",
+                problemstatement: "Users are AOL Teachers and beneficiaries are students that have at least completed Part 1 Course.Pain Points:Manual and time-consuming outreach: Teachers have to manually contact each student through phone calls or other methods, which becomes increasingly difficult as the number of students grows. This process becomes even more strenuous as the number of students grows and as the number of events/activities happening grows with time. Lack of visibility into student progress: Teachers do not have a system that provides insights into student progress and their journey, making it challenging to offer targeted support and guidance. For example, if the teacher would have known that their student had already done the Art of Living Part 2 Course, then the teacher can tailor the message and inspire him/her to do advanced courses like the Volunteer Training Program. Inefficient communication: The absence of an easy-to-use interface for drafting, reviewing, and sending messages to students leads to communication inefficiencies. With no visibility into student’s Art of Living journey today on what courses they have taken, teachers often send messages that might not interest or be relevant to them. Hard to use User interface: Today, the teacher often needs to use the computer and goes through several steps to achieve the task of sending messages. Low student retention: Inadequate engagement and support contribute to low student retention rates.",
+                solutions: " ",
                 joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
             },
 
             /*PROEJECT 2*/
 
             {
-                title: "Agentic AI Assistant for Teacher Empowerment",
+                title: "Personal Branding Framework for Synergetic Diverse Outreach",
                 team: "Nisha Balani",
                 /*contact: " ",*/
-                description: "Personal Branding Framework for Synergetic Diverse Outreach.",
-                problemstatement: "Art of Living Teachers globally that do not know how market and present themselves to well establish yoga businesses to build synergetic and sustainable relationships to grow new student pipeline with efficiency of time and effort and do this at scale.",
-                solutions: "This advanced AI-powered agent is designed to support teachers in building a robust personal brand and streamlining their professional journey. Its capabilities include generating a personalized branding framework, such as an Art of Living Resume, tailored cover letters, concise biography summaries, and digital stationery like customized email signatures with integrated logos. The AI also offers actionable guidance on identifying high-quality, well-rated yoga studios nationwide,focusing on those whose mission aligns with promoting holistic mental well-being. It simplifies outreach by automatically generating professional and persuasive emails for initiating partnerships. These pitches can highlight the teacher’s ability to offer services such as weekly meditation sessions, Stress & Anxiety Protocols, or even the Art of Living courses when suitable. To maximize efficiency, the bot centrally manages the teacher’s schedule, preventing conflicts across multiple commitments, such as yoga studios, courses, and community meetups.Core Objective: Capitalize on the low-hanging fruit within yoga studios nationwide—spaces where audiences are already familiar with the value of the mind-body connection, are accustomed to paying for quality instruction, and are less constrained by rigid religious frameworks. This AI ensures teachers are legally protected through studio agreements while establishing them as credible meditation experts.The result is a sustainable and organic outreach model that generates diverse leads, raises mainstream awareness, and expands the teacher’s impact—all while minimizing the time and effort required for relationship-building and logistical coordination.",
+                description: "Agentic AI Assistant for Teacher Empowerment ",
+                problemstatement: "Art of Living Teachers globally that do not know how market and present themselves to well establish yoga businesses to build synergetic and sustainable relationships to grow new student pipeline with efficiency of time and effort and do this at scale",
+                solutions: " This advanced AI-powered agent is designed to support teachers in building a robust personal brand and streamlining their professional journey. Its capabilities include generating a personalized branding framework, such as an Art of Living Resume, tailored cover letters, concise biography summaries, and digital stationery like customized email signatures with integrated logos. The AI also offers actionable guidance on identifying high-quality, well-rated yoga studios nationwide,focusing on those whose mission aligns with promoting holistic mental well-being. It simplifies outreach by automatically generating professional and persuasive emails for initiating partnerships. These pitches can highlight the teacher’s ability to offer services such as weekly meditation sessions, Stress & Anxiety Protocols, or even the Art of Living courses when suitable.To maximize efficiency, the bot centrally manages the teacher’s schedule, preventing conflicts across multiple commitments, such as yoga studios, courses, and community meetups. Core Objective: Capitalize on the low-hanging fruit within yoga studios nationwide—spaces where audiences are already familiar with the value of the mind-body connection, are accustomed to paying for quality instruction, and are less constrained by rigid religious frameworks. This AI ensures teachers are legally protected through studio agreements while establishing them as credible meditation experts. The result is a sustainable and organic outreach model that generates diverse leads, raises mainstream awareness, and expands the teacher’s impact—all while minimizing the time and effort required for relationship-building and logistical coordination.",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+            
+             /*PROEJECT 3*/
+
+            {
+                title: "Datamukti",
+                team: "Keshav",
+                /*contact: " ",*/
+                description: "An Idea bank which allows for cross collaboration of individuals all across the organization leveraging Gen Ai Semantic Search / RAG functionalities for quick look up",
+                problemstatement: "Board Memembers (Key Decision Makers) - Can use this tool to find ideas proposed by individuals to solve key issues faced by the organization. Additionally it can also connect these key decision makers with the right people who could help to solve the said issue.",
+                solutions: "Essentially a Web App with a Search bar, where users can look up the work done by the organization. Think perplexity excpet for AOL specific content. A platform for collaboration.",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+            
+             /*PROEJECT 4*/
+
+            {
+                title: "Ai Teachers Assistant",
+                team: "Chinmaya Devaraj",
+                /*contact: " ",*/
+                description: "AI to  help teachers follow and support participants journey more seamlessly.",
+                problemstatement: "We are interested in solving on critical problem to help teachers follow and support participants journey more seamlessly. Continued engagement with past participants falls off in due time as we keep teaching courses. The existing way of communication with our sky graduates is through emails and WhatsApp groups. We don’t have an active and standardized way of tracking whether they are reading the messages or interacting through the app To solve this we need an AI assistant that can help teachers with a centralized communication. Ai assistant in the form of a chat interface will send info about upcoming courses, follow-ups, etc. It will also have personalized challenge or mentoring option so that existing sky graduates are mentored. It’s a chat-based interface that is personalized allowing teacher to monitor what is going on with all the participants and also have options for teacher to type and communicate with all existing participants.",
+                solutions: "",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+            
+            /*PROEJECT 5*/
+
+            {
+                title: "Art of Living Intro Talk Mentor Bot",
+                team: "Akshay Gaur",
+                /*contact: " ",*/
+                description: "An AI-powered mobile application designed to: Simulate realistic participant interactions with diverse objection scenarios",
+                problemstatement: "Presenters of the Art of Living Intro Talk face challenges in effectively delivering their material and confidently closing the talk to enroll participants into the Part 1 course. They often struggle with handling objections such as time constraints or cost concerns. Traditional training methods via Zoom calls with teachers lack the dynamic, interactive feedback necessary to refine these skills in real-world scenarios.",
+                solutions: "The Art of Living Intro Talk Mentor Bot is an AI-powered mobile application designed to:Simulate realistic participant interactions with diverse objection scenarios. Provide real-time, personalized coaching and feedback during practice sessions. Offer dynamic role-play experiences that allow presenters to experiment with various closing techniques.Use data analytics to track performance, identify improvement areas, and adapt training content to each user's needs.",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+            
+            /*PROEJECT 6*/
+
+            {
+                title: "Inner Peace AI",
+                team: "Rishi Tandon",
+                /*contact: " ",*/
+                description: " Personalized Wellness through Wearable Intelligence.",
+                problemstatement: "Who is affected? Tech-savvy American adults (ages 25–55) seeking personalized, evidence-based solutions for stress management, chronic health conditions (e.g., diabetes, hypertension), or spiritual growth. What are their specific pain points? Generic Guidance: Current meditation and breathwork apps (e.g., Calm, Headspace) use one-size-fits-all recommendations, ignoring real-time physiological data (e.g., heart rate variability, sleep quality) or emotional states. Example: A stressed user with elevated cortisol levels receives the same 5-minute breathing exercise as a well-rested user, leading to ineffective outcomes. Lack of Measurable Progress: Users cannot track tangible improvements in stress, focus, or chronic conditions (e.g., BP reduction), causing disengagement. Example: A diabetes patient spends weeks on generic guided meditations but sees no improvement in glucose levels. Misaligned Practices: Non-evidence-based or harmful recommendations from apps with superficial understanding of ancient techniques. Example: A user with hypertension is incorrectly advised to practice Bhastrika Pranayama (a vigorous breathwork technique), worsening their condition. Decision Fatigue: Overwhelmed by hundreds of uncurated practices (meditations, kriyas, courses) with no clarity on what works best for their unique needs.",
+                solutions: "Onboarding & Personalization Users connect wearables, complete an assessment, and receive a personalized meditation plan. Daily Adaptive Meditation & Breathwork AI recommends techniques based on real-time stress, sleep, and HRV data, ensuring optimal practice. Focus & Productivity Boost Users get pre-task breathwork recommendations for better concentration and deep work. Sleep Optimization AI suggests personalized wind-down routines and tracks improvements in sleep quality. Real-Time Stress Intervention Detects stress spikes and provides quick guided breathwork for immediate relief. Progress Tracking & Insights Personalized dashboards show the impact of meditation on health metrics,reinforcing habit formation. Advanced Practitioners & Community Offers advanced techniques, live sessions, and group challenges to deepen practice and engagement.",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+            
+            
+            /*PROEJECT 7*/
+
+            {
+                title: "Ai Marketing Assistant",
+                team: "Alisha Arora",
+                /*contact: " ",*/
+                description: "Ai assistant that understands the theme for art of living and generates flyers, video clips, social media content based on the instructions given to it.",
+                problemstatement: "Organizers struggle to promote generate high quality marketing content for various themes and platforms. There is also conflicting promotions harboring at the same time. This assistant will keep Art of Living messaging at the core and be able to generate text, audio and video content for various platforms. The marketing should happen through a consolidated platform so that the conflicts are minimized across various themes and areas.",
+                solutions: "1. Marketing content Ai assisted marketing content for various platforms that is generated based on instructions and the area,age group, etc 2. User cohorting Create user cohorts based on the content they engage with, user profiles, time of engagement, needs and feedback 3. Consolidation of marketing platform Marketing through single interface on the platform 4. Post lead generation email or app contact generation",
                 joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
             },
 
@@ -298,7 +338,7 @@
         const technologies = ["Blockchain", "IoT", "AR/VR", "Robotics", "Cloud Computing", "5G", "Edge Computing", "Big Data", "Machine Learning", "Cybersecurity"];
         const leads = ["Emma Watson", "Michael Zhang", "Sofia Rodriguez", "James Kim", "Laura Chen", "David Patel", "Maria Garcia", "Tom Anderson", "Priya Shah", "Marcus Lee"];
 
-        while (projects.length < 25) {
+        while (projects.length < 1) {
             const index = projects.length + 1;
             const industry = industries[Math.floor(Math.random() * industries.length)];
             const tech = technologies[Math.floor(Math.random() * technologies.length)];
