@@ -77,11 +77,73 @@
             cursor: pointer;
             transition: color 0.3s;
         }
+
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .event-date {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
     </style>
 </head>
 <body class="bg-gray-50">
+
+
+     <!-- Header -->
+     <header class="fixed w-full z-50">
+        <nav class="glass-nav py-4">
+            <div class="container mx-auto px-6 flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="/api/placeholder/40/40" alt="Logo" class="h-10 w-10 rounded-full">
+                    <span class="ml-3 text-white font-bold text-xl">TechnovateX</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-white hover:text-blue-200 transition-colors">Home</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition-colors">Schedule</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition-colors">Speakers</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition-colors">Sponsors</a>
+                    <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">Contact</a>
+                </div>
+                
+                <button class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl">
+                <h1 class="text-6xl font-bold text-white mb-4">TechnovateX 2025</h1>
+                <div class="event-date mb-8">
+                    <p class="text-3xl text-blue-300 font-light">March 15-16, 2025</p>
+                    <p class="text-xl text-gray-300 mt-2">Silicon Valley Convention Center</p>
+                </div>
+                <p class="text-xl text-gray-200 mb-8">Join the biggest tech innovation event of the year. Two days of coding, creativity, and breakthrough solutions.</p>
+                <a href="#" class="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors inline-block">Register Now</a>
+            </div>
+        </div>
+    </section>
+
+
+
     <!-- Header Section -->
-    <header class="gradient-bg text-white py-16">
+    <!--<header class="gradient-bg text-white py-16">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <img src="/api/placeholder/300/200" alt="Left Event Image" class="rounded-lg shadow-lg mb-4 md:mb-0">
@@ -93,7 +155,7 @@
                 <img src="/api/placeholder/300/200" alt="Right Event Image" class="rounded-lg shadow-lg mt-4 md:mt-0">
             </div>
         </div>
-    </header>
+    </header>-->
 
     <!-- About Section -->
     <section class="py-16 bg-white">
