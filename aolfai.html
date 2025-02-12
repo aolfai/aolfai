@@ -6,6 +6,23 @@
     <title>Hackathon Event</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
+
+.hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .event-date {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
         /* Previous styles */
         .gradient-bg {
             background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
@@ -31,27 +48,22 @@
 
         .modal {
             display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            position: absolute; /* Changed from fixed */
             background: rgba(0,0,0,0.8);
             z-index: 1000;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
         }
 
         .modal-content {
             background: white;
-            width: 90%;
-            max-width: 800px;
-            max-height: 90vh;
             border-radius: 12px;
             padding: 30px;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            position: relative; /* Changed from fixed */
+            max-height: 80vh;
             overflow-y: auto;
+            transform: none; /* Removed transform */
         }
 
         .modal-content::-webkit-scrollbar {
@@ -80,6 +92,46 @@
     </style>
 </head>
 <body class="bg-gray-50">
+
+     <!-- Header -->
+     <header class="fixed w-full z-50">
+        <nav class="glass-nav py-4">
+            <div class="container mx-auto px-6 flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="/api/placeholder/40/40" alt="Logo" class="h-10 w-10 rounded-full">
+                    <span class="ml-3 text-white font-bold text-xl">TechnovateX</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-white hover:text-blue-200 transition-colors">Home</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition-colors">Schedule</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition-colors">Speakers</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition-colors">Sponsors</a>
+                    <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">Contact</a>
+                </div>
+                
+                <button class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl">
+                <h1 class="text-6xl font-bold text-white mb-4">TechnovateX 2025</h1>
+                <div class="event-date mb-8">
+                    <p class="text-3xl text-blue-300 font-light">March 15-16, 2025</p>
+                    <p class="text-xl text-gray-300 mt-2">Silicon Valley Convention Center</p>
+                </div>
+                <p class="text-xl text-gray-200 mb-8">Join the biggest tech innovation event of the year. Two days of coding, creativity, and breakthrough solutions.</p>
+                <a href="#" class="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors inline-block">Register Now</a>
+            </div>
+        </div>
     <!-- Header Section -->
     <header class="gradient-bg text-white py-16">
         <div class="container mx-auto px-4">
@@ -211,6 +263,11 @@
 
         function openModal(index) {
             const project = projects[index];
+            const clickedTile = event.currentTarget.parentElement;
+            const tileRect = clickedTile.getBoundingClientRect();
+            const modal = document.getElementById("modal");
+            
+            // Fill modal content
             document.getElementById("modal-title").textContent = project.title;
             document.getElementById("modal-team").textContent = project.team;
             document.getElementById("modal-lead").textContent = project.lead;
@@ -218,22 +275,21 @@
             document.getElementById("modal-details").textContent = project.details;
             document.getElementById("modal-solutions").textContent = project.solutions;
             document.getElementById("join-button").href = project.joinLink;
-            document.getElementById("modal").style.display = "block";
-            document.body.style.overflow = "hidden";
-        }
-
-        function closeModal() {
-            document.getElementById("modal").style.display = "none";
-            document.body.style.overflow = "auto";
-        }
-
-        window.onclick = function(event) {
-            if (event.target === document.getElementById("modal")) {
-                closeModal();
+            
+            // Position modal near the clicked tile
+            modal.style.display = "block";
+            modal.style.left = `${clickedTile.offsetLeft}px`;
+            modal.style.top = `${clickedTile.offsetTop}px`;
+            
+            // Ensure modal is visible in viewport
+            const modalRect = modal.getBoundingClientRect();
+            if (modalRect.right > window.innerWidth) {
+                modal.style.left = `${window.innerWidth - modalRect.width - 20}px`;
             }
-        };
-
-        window.onload = displayProjects;
+            if (modalRect.bottom > window.innerHeight) {
+                modal.style.top = `${window.scrollY + 20}px`;
+            }
+        }
     </script>
 </body>
 </html>
