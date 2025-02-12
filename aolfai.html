@@ -293,6 +293,8 @@
                 problemstatement: "Users are AOL Teachers and beneficiaries are students that have at least completed Part 1 Course.Pain Points:Manual and time-consuming outreach: Teachers have to manually contact each student through phone calls or other methods, which becomes increasingly difficult as the number of students grows. This process becomes even more strenuous as the number of students grows and as the number of events/activities happening grows with time. Lack of visibility into student progress: Teachers do not have a system that provides insights into student progress and their journey, making it challenging to offer targeted support and guidance. For example, if the teacher would have known that their student had already done the Art of Living Part 2 Course, then the teacher can tailor the message and inspire him/her to do advanced courses like the Volunteer Training Program. Inefficient communication: The absence of an easy-to-use interface for drafting, reviewing, and sending messages to students leads to communication inefficiencies. With no visibility into student’s Art of Living journey today on what courses they have taken, teachers often send messages that might not interest or be relevant to them. Hard to use User interface: Today, the teacher often needs to use the computer and goes through several steps to achieve the task of sending messages. Low student retention: Inadequate engagement and support contribute to low student retention rates.",
                 solutions: " ",
                 joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+
+              
             },
 
             /*PROEJECT 2*/
@@ -359,13 +361,32 @@
             /*PROEJECT 7*/
 
             {
-                title: "Ai Marketing Assistant",
+                title: "AI Marketing Assistant",
                 team: "Alisha Arora",
                 /*contact: " ",*/
                 description: "Ai assistant that understands the theme for art of living and generates flyers, video clips, social media content based on the instructions given to it.",
                 problemstatement: "Organizers struggle to promote generate high quality marketing content for various themes and platforms. There is also conflicting promotions harboring at the same time. This assistant will keep Art of Living messaging at the core and be able to generate text, audio and video content for various platforms. The marketing should happen through a consolidated platform so that the conflicts are minimized across various themes and areas.",
-                solutions: "1. Marketing content Ai assisted marketing content for various platforms that is generated based on instructions and the area,age group, etc 2. User cohorting Create user cohorts based on the content they engage with, user profiles, time of engagement, needs and feedback 3. Consolidation of marketing platform Marketing through single interface on the platform 4. Post lead generation email or app contact generation",
+               
+                solutions: `
+            <div class="modal-section-content">
+                <h3>Key Solutions</h3>
+                <ul>
+                    <li>< 1. Marketing content Ai assisted marketing content for various platforms that is generated based on instructions and the area,age group, etc </li>
+                    <li>< 1. <li>< 1. Marketing content Ai assisted marketing content for various platforms that is generated based on instructions and the area,age group, etc </li></li>
+                    <li>< 1.Consolidation of marketing platform Marketing through single interface on the platform 4. Post lead generation email or app contact generation</li>
+                    
+                     
+                    /* solutions: "1. Marketing content Ai assisted marketing content for various platforms that is generated based on instructions and the area,age group, etc 2. User cohorting Create user cohorts based on the content they engage with, user profiles, time of engagement, needs and feedback 3. Consolidation of marketing platform Marketing through single interface on the platform 4. Post lead generation email or app contact generation",*/
                 joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+
+              
+
+                
+                
+            </div>
+        `,
+
+                
             },
             
             
@@ -587,12 +608,20 @@ solutions: "One click marketing studio where teachers/volunteers simply input th
             });
         }
 
+        // Add the styles for modal window content formating 
+            const styleSheet = document.createElement("style");
+            styleSheet.innerText = additionalStyles;
+            document.head.appendChild(styleSheet);
+
         function openModal(index) {
             const project = projects[index];
             document.getElementById("modal-title").textContent = project.title;
             document.getElementById("modal-team").textContent = project.team;
-           /* document.getElementById("modal-lead").textContent = project.lead;*/
-            document.getElementById("modal-description").textContent = project.description;
+           /* document.getElementById("modal-lead").textContent = project.lead;
+            document.getElementById("modal-description").textContent = project.description;*/
+
+            document.getElementById("modal-description").innerHTML = project.description;
+
             document.getElementById("modal-details").textContent = project.problemstatement;
             document.getElementById("modal-solutions").textContent = project.solutions;
             document.getElementById("join-button").href = project.joinLink;
