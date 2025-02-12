@@ -6,23 +6,6 @@
     <title>Hackathon Event</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
-
-.hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/api/placeholder/1920/1080');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-        
-        .event-date {
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
         /* Previous styles */
         .gradient-bg {
             background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
@@ -48,22 +31,27 @@
 
         .modal {
             display: none;
-            position: absolute; /* Changed from fixed */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: rgba(0,0,0,0.8);
             z-index: 1000;
-            width: 100%;
-            max-width: 800px;
-            margin: 20px auto;
         }
 
         .modal-content {
             background: white;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
             border-radius: 12px;
             padding: 30px;
-            position: relative; /* Changed from fixed */
-            max-height: 80vh;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             overflow-y: auto;
-            transform: none; /* Removed transform */
         }
 
         .modal-content::-webkit-scrollbar {
@@ -92,11 +80,20 @@
     </style>
 </head>
 <body class="bg-gray-50">
-
-     <!-- Header -->
-
-
-   
+    <!-- Header Section -->
+    <header class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <img src="/api/placeholder/300/200" alt="Left Event Image" class="rounded-lg shadow-lg mb-4 md:mb-0">
+                <div class="text-center md:mx-8">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">TechnovateX 2025</h1>
+                    <p class="text-xl mb-2">March 15-16, 2025</p>
+                    <p class="text-xl">Silicon Valley Convention Center</p>
+                </div>
+                <img src="/api/placeholder/300/200" alt="Right Event Image" class="rounded-lg shadow-lg mt-4 md:mt-0">
+            </div>
+        </div>
+    </header>
 
     <!-- About Section -->
     <section class="py-16 bg-white">
@@ -214,11 +211,6 @@
 
         function openModal(index) {
             const project = projects[index];
-            const clickedTile = event.currentTarget.parentElement;
-            const tileRect = clickedTile.getBoundingClientRect();
-            const modal = document.getElementById("modal");
-            
-            // Fill modal content
             document.getElementById("modal-title").textContent = project.title;
             document.getElementById("modal-team").textContent = project.team;
             document.getElementById("modal-lead").textContent = project.lead;
@@ -226,21 +218,22 @@
             document.getElementById("modal-details").textContent = project.details;
             document.getElementById("modal-solutions").textContent = project.solutions;
             document.getElementById("join-button").href = project.joinLink;
-            
-            // Position modal near the clicked tile
-            modal.style.display = "block";
-            modal.style.left = `${clickedTile.offsetLeft}px`;
-            modal.style.top = `${clickedTile.offsetTop}px`;
-            
-            // Ensure modal is visible in viewport
-            const modalRect = modal.getBoundingClientRect();
-            if (modalRect.right > window.innerWidth) {
-                modal.style.left = `${window.innerWidth - modalRect.width - 20}px`;
-            }
-            if (modalRect.bottom > window.innerHeight) {
-                modal.style.top = `${window.scrollY + 20}px`;
-            }
+            document.getElementById("modal").style.display = "block";
+            document.body.style.overflow = "hidden";
         }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        window.onclick = function(event) {
+            if (event.target === document.getElementById("modal")) {
+                closeModal();
+            }
+        };
+
+        window.onload = displayProjects;
     </script>
 </body>
 </html>
