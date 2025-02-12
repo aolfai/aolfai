@@ -5,10 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hackathon Event</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+   
+   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+    
+    
+    <style>
+       /* Base font settings */
+        body {
+            font-family: 'Work Sans', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6, .font-serif {
+            font-family: 'Lora', serif;
+        }
+
+    
+    
         /* Previous styles */
         .gradient-bg {
-            background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+            background: linear-gradient(#FEF7E3, #FFFAED 0%, #FFFBF2 100%);
         }
         
         /* Added modal and project tile styles */
@@ -79,10 +95,10 @@
         }
 
         .hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://github.com/aolfai/aolfai/blob/main/gurudevai-bgk.png?raw=true');
+            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url('https://github.com/aolfai/aolfai/blob/main/gurudevai-bgk.png?raw=true');
             background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background-position: right center;
+           /* background-attachment:fixed;*/
         }
         
         .glass-nav {
@@ -94,33 +110,60 @@
         .event-date {
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
+        
+        .bg-blue-600{
+        	background-color:#FF7E00;
+        }
+        
+        
+        
+        /* Desktop styles */
+        @media (min-width: 768px) {
+            .hero-bg {
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                           url('https://github.com/aolfai/aolfai/blob/main/gurudevai-bgk.png?raw=true');
+                background-size: cover;
+                background-position: right center;
+            }
+        }
+
+        /* Mobile styles */
+        @media (max-width: 767px) {
+            .hero-bg {
+                background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), 
+                           url('https://github.com/aolfai/aolfai/blob/main/gurudevai-bgk.png?raw=true');
+                background-size: contain;
+                background-position: center 120px;
+                background-repeat: no-repeat;
+                padding-top: 60vh; /* Space for the image */
+            }
+        }
     </style>
 </head>
-<body class="bg-gray-50">
+<body>
 
 
-     <!-- Header -->
-     <header class="fixed w-full z-50">
+      <!-- Header -->
+    <header class="fixed w-full z-50">
         <nav class="glass-nav py-4">
-            <div class="container mx-auto px-6 flex items-center justify-between">
-                <div class="flex items-center">
-                    <img src="https://www.artofliving.org/img/ic-logo.svg" alt="Logo" class="h-30 w-30">
-                    <span class="ml-3 text-white font-bold text-xl">AI Meets AI</span>
+            <div class="container mx-auto px-6">
+                <!-- Mobile: Center logo and text -->
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <img src="https://www.artofliving.org/img/ic-logo.svg" alt="Logo" class="h-16 md:h-12 mb-2 md:mb-0">
+                        <span class="text-white font-bold text-xl md:ml-3">AI Meets AI</span>
+                    </div>
+                    
+                    <div class="hidden md:flex items-center space-x-8 mt-4 md:mt-0">
+                        <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">Contact</a>
+                    </div>
+                    
+                    <button class="md:hidden absolute right-6 top-6 text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
                 </div>
-                
-                <div class="hidden md:flex items-center space-x-8">
-                   <!-- <a href="#" class="text-white hover:text-blue-200 transition-colors">Home</a>
-                    <a href="#" class="text-white hover:text-blue-200 transition-colors">Schedule</a>
-                    <a href="#" class="text-white hover:text-blue-200 transition-colors">Speakers</a>
-                    <a href="#" class="text-white hover:text-blue-200 transition-colors">Sponsors</a>-->
-                    <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">Contact</a>
-                </div>
-                
-                <button class="md:hidden text-white">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
             </div>
         </nav>
     </header>
@@ -128,15 +171,28 @@
     <!-- Hero Section -->
     <section class="hero-bg min-h-screen flex items-center">
         <div class="container mx-auto px-6">
-            <div class="max-w-2xl">
-                <h1 class="text-6xl font-bold text-white mb-4">AI Meet AI - 2025</h1>
-                <div class="event-date mb-8">
-                    <p class="text-3xl text-blue-300 font-light">May 13-14, 2025</p>
-                    <p class="text-xl text-gray-300 mt-2">Seattle, WA</p>
+            <div class="max-w-2xl mx-auto md:mx-0">
+                <!-- Mobile: Text appears below the background image -->
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">AI Meet AI - 2025</h1>
+                    <div class="event-date mb-8">
+                        <p class="text-2xl md:text-3xl text-white font-bold">May 13-14, 2025</p>
+                        <p class="text-lg md:text-xl text-white font-bold mt-2">Seattle, WA</p>
+                    </div>
+                    <p class="text-lg md:text-xl text-white font-normal mb-8">Join the biggest tech innovation event of the year. Two days of coding, creativity, and breakthrough solutions.</p>
+                    <a href="#ideas" class="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors inline-block">Join the team</a>
                 </div>
-                <p class="text-xl text-gray-200 mb-8">Join the biggest tech innovation event of the year. Two days of coding, creativity, and breakthrough solutions.</p>
-                <a href="#ideas" class="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors inline-block">Join the team</a>
             </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 bg-white" id="ideas">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">About the Hackathon</h2>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                The Art of Living presents the Hackathon for Mental Health, bringing together passionate minds to create AI-driven solutions that promote mental well-being, accessibility, and emotional resilience. From intelligent chatbots to innovative stress-relief tools, let's harness the power of technology for a healthier mind and a brighter future. 🚀 Join us in shaping the future of mental health through innovation!
+            </p>
         </div>
     </section>
 
@@ -157,16 +213,7 @@
         </div>
     </header>-->
 
-    <!-- About Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-8 text-center">About the Hackathon</h2>
-            <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
-                <div id="ideas">The</div> Art of Living presents the Hackathon for Mental Health, bringing together passionate minds to create AI-driven solutions that promote mental well-being, accessibility, and emotional resilience. From intelligent chatbots to innovative stress-relief tools, let's harness the power of technology for a healthier mind and a brighter future.  🚀 Join us in shaping the future of mental health through innovation!
-
-            </p>
-        </div>
-    </section>
+   
 
     <!-- Project Ideas Section -->
   
