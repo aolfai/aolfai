@@ -156,48 +156,26 @@
         }
 
         /* Desktop styles */
-@media (min-width: 768px) {
-    .hero-bg {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                   url('https://github.com/aolfai/aolfai/blob/main/gurudevai-bgk.png?raw=true');
-        background-size: cover;
-        background-position: right 80px; /* Adjusted to move image down */
-        min-height: calc(100vh + 80px); /* Account for nav height */
-        padding-top: 120px; /* Add padding to prevent content overlap with nav */
-    }
-}
-        }
-        /* Update header height */
-header {
-    height: 80px;
-}
-
-        /* Mobile styles */
         @media (min-width: 768px) {
             .hero-bg {
                 background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
                            url('https://github.com/aolfai/aolfai/blob/main/gurudevai-bgk.png?raw=true');
-                           background-size: contain;
-        background-position: center 120px; /* Adjusted to move image down */
-        background-repeat: no-repeat;
-        background-color: black; /* Changed to black for better contrast */
-        min-height: 100vh;
-        padding-top: 30vh; /* Reduced padding */
+                background-size: cover;
+                background-position: right center;
             }
-            /* Adjust text container spacing */
-    .hero-bg .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
         }
-        /* Update header height */
-    }
-    header {
-    height: 80px;
-}
-            
-        
-  
+
+        /* Mobile styles */
+        @media (max-width: 767px) {
+            .hero-bg {
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                           url('https://github.com/aolfai/aolfai/blob/main/gurudevai-bgk.png?raw=true');
+                background-size: contain;
+                background-position: center 80px;
+                background-repeat: no-repeat;
+                padding-top: 60vh; /* Space for the image */
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -280,8 +258,8 @@ header {
                    <!-- <div class="event-date mb-8">
                         <p class="text-2xl md:text-3xl text-blue-300 font-light">May 13-14, 2025</p>
                         <p class="text-lg md:text-xl text-gray-300 mt-2">Seattle, WA</p>
-                    </div>-->
-                    <p class="text-lg md:text-xl text-gray-200 mb-8">Step Into the Future of Transformation ✨ A Day of Innovation, Insight & Inner Connection through AI</p>
+                    </div>
+                    <p class="text-lg md:text-xl text-gray-200 mb-8">Join the biggest tech innovation event of the year. Two days of coding, creativity, and breakthrough solutions.</p>
                     <a href="#ideas" class="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors inline-block">Join the team</a>
                 </div>
             </div>
