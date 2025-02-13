@@ -149,14 +149,65 @@
         margin-bottom: 15px;
         line-height: 1.6;
     }
-`;
+    .glass-nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* Desktop styles */
+        @media (min-width: 768px) {
+            .hero-bg {
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                           url('https://github.com/aolfai/aolfai/blob/main/gurudevai-bgk.png?raw=true');
+                background-size: cover;
+                background-position: right center;
+            }
+        }
+
+        /* Mobile styles */
+        @media (max-width: 767px) {
+            .hero-bg {
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                           url('https://github.com/aolfai/aolfai/blob/main/gurudevai-bgk.png?raw=true');
+                background-size: contain;
+                background-position: center 80px;
+                background-repeat: no-repeat;
+                padding-top: 60vh; /* Space for the image */
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
 
-
      <!-- Header -->
      <header class="fixed w-full z-50">
+        <nav class="glass-nav py-4">
+            <div class="container mx-auto px-6">
+                <!-- Mobile: Center logo and text -->
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <img src="https://www.artofliving.org/img/ic-logo.svg" alt="Logo" class="h-16 md:h-12 mb-2 md:mb-0">
+                        <span class="text-white font-bold text-xl md:ml-3">AI Meets AI</span>
+                    </div>
+                    
+                    <div class="hidden md:flex items-center space-x-8 mt-4 md:mt-0">
+                        <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">Contact</a>
+                    </div>
+                    
+                    <button class="md:hidden absolute right-6 top-6 text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+     <!-- Header -->
+   <!--  <header class="fixed w-full z-50">
         <nav class="glass-nav py-4">
             <div class="container mx-auto px-6 flex items-center justify-between">
                 <div class="flex items-center">
@@ -169,7 +220,7 @@
                     <a href="#" class="text-white hover:text-blue-200 transition-colors">Schedule</a>
                     <a href="#" class="text-white hover:text-blue-200 transition-colors">Speakers</a>
                     <a href="#" class="text-white hover:text-blue-200 transition-colors">Sponsors</a>-->
-                    <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">Contact</a>
+                <!--    <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">Contact</a>
                 </div>
                 
                 <button class="md:hidden text-white">
@@ -179,10 +230,10 @@
                 </button>
             </div>
         </nav>
-    </header>
+    </header>-->
 
     <!-- Hero Section -->
-    <section class="hero-bg min-h-screen flex items-center">
+   <!-- <section class="hero-bg min-h-screen flex items-center">
         <div class="container mx-auto px-6">
             <div class="max-w-2xl">
                 <h1 class="text-6xl font-bold text-white mb-4">AI Meet AI</h1>
@@ -190,8 +241,27 @@
                     <p class="text-3xl text-blue-300 font-light">May 13-14, 2025</p>
                     <p class="text-xl text-gray-300 mt-2">Seattle, WA</p>
                 </div>-->
-                <p class="text-xl text-gray-200 mb-8">Step Into the Future of Transformation ✨ A Day of Innovation, Insight & Inner Connection through AI</p>
+              <!--  <p class="text-xl text-gray-200 mb-8">Step Into the Future of Transformation ✨ A Day of Innovation, Insight & Inner Connection through AI</p>
                 <a href="#ideas" class="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors inline-block">Join the team</a>
+            </div>
+        </div>
+    </section>-->
+
+
+     <!-- Hero Section -->
+     <section class="hero-bg min-h-screen flex items-center">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto md:mx-0">
+                <!-- Mobile: Text appears below the background image -->
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">AI Meet AI</h1>
+                   <!-- <div class="event-date mb-8">
+                        <p class="text-2xl md:text-3xl text-blue-300 font-light">May 13-14, 2025</p>
+                        <p class="text-lg md:text-xl text-gray-300 mt-2">Seattle, WA</p>
+                    </div>-->
+                    <p class="text-lg md:text-xl text-gray-200 mb-8">Step Into the Future of Transformation ✨ A Day of Innovation, Insight & Inner Connection through AI</p>
+                    <a href="#ideas" class="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors inline-block">Join the team</a>
+                </div>
             </div>
         </div>
     </section>
