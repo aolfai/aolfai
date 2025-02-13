@@ -154,26 +154,31 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
+        .beige-bg {
+            background-color: #F5F5DC;
+        }
 
         /* Desktop styles */
         @media (min-width: 768px) {
             .hero-bg {
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                           url('https://github.com/aolfai/aolfai/blob/main/gurudevai-bgk.png?raw=true');
+                
                 background-size: cover;
-                background-position: right center;
+                background-position: right 80px;
+                min-height: calc(100vh + 80px);
+                padding-top: 120px;
             }
         }
 
         /* Mobile styles */
         @media (max-width: 767px) {
             .hero-bg {
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                           url('https://github.com/aolfai/aolfai/blob/main/gurudevai-bgk.png?raw=true');
+                
                 background-size: contain;
-                background-position: center 80px;
+                background-position: center 120px;
                 background-repeat: no-repeat;
-                padding-top: 60vh; /* Space for the image */
+                background-color: black;
+                min-height: 100vh;
+                padding-top: 30vh;
             }
         }
     </style>
