@@ -156,27 +156,47 @@
         }
 
         /* Desktop styles */
+@media (min-width: 768px) {
+    .hero-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                   url('https://github.com/aolfai/aolfai/blob/main/gurudevai-bgk.png?raw=true');
+        background-size: cover;
+        background-position: right 80px; /* Adjusted to move image down */
+        min-height: calc(100vh + 80px); /* Account for nav height */
+        padding-top: 120px; /* Add padding to prevent content overlap with nav */
+    }
+}
+        }
+        /* Update header height */
+header {
+    height: 80px;
+}
+
+        /* Mobile styles */
         @media (min-width: 768px) {
             .hero-bg {
                 background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
                            url('https://github.com/aolfai/aolfai/blob/main/gurudevai-bgk.png?raw=true');
-                background-size: cover;
-                background-position: right center;
+                           background-size: contain;
+        background-position: center 120px; /* Adjusted to move image down */
+        background-repeat: no-repeat;
+        background-color: black; /* Changed to black for better contrast */
+        min-height: 100vh;
+        padding-top: 30vh; /* Reduced padding */
             }
+            /* Adjust text container spacing */
+    .hero-bg .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
         }
-
-        /* Mobile styles */
-        @media (max-width: 767px) {
-            .hero-bg {
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                           url('https://github.com/aolfai/aolfai/blob/main/gurudevai-bgk.png?raw=true');
-                background-size: contain;
-                background-position: center 50px;
-                background-repeat: no-repeat;
-                padding-top: 40vh; /* Reduced from 60vh */
-        background-color: transparent; /* Removes grey background */
+        /* Update header height */
+    }
+    header {
+    height: 80px;
+}
             
-        }
+        
   
     </style>
 </head>
