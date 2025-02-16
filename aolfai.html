@@ -243,6 +243,7 @@
                         <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
                             Contact
                         </a>
+			     <button onclick="logout()" class="btn btn-danger">Logout</button>
                     </div>
                 </div>
             </div>
@@ -428,6 +429,14 @@
             passwordInput.value = '';
         }
     }
+
+	 function logout() {
+            sessionStorage.removeItem('passwordEntered');
+            document.getElementById('password-overlay').style.display = 'flex';
+            document.getElementById('main-content').classList.add('content-hidden');
+            document.getElementById('password-input').value = '';
+            document.getElementById('error-message').classList.add('hidden');
+        }
 
     // Allow Enter key to submit
     document.getElementById('password-input').addEventListener('keypress', function(e) {
