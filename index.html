@@ -51,6 +51,8 @@
             margin-top: 10px;
         }
     </style>
+    <!-- Include the SHA-256 hashing library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </head>
 <body>
     <div class="login-container">
@@ -62,13 +64,19 @@
     </div>
 
     <script>
-        const correctPassword = "GurudevAi1008"; // Change this to your desired password
-
+        // The hashed value of "GurudevAi1008"
+        const hashedCorrectPassword = "a4e25ef67e12a054c37d8b5eeb8ba2e75fee40c39b8d3cd52ecfdc3d25848644";
+        
         function checkPassword() {
             const passwordInput = document.getElementById('passwordInput');
             const errorMessage = document.getElementById('errorMessage');
-
-            if (passwordInput.value === correctPassword) {
+            
+            // Hash the input password
+            const hashedInput = CryptoJS.SHA256(passwordInput.value).toString();
+            
+            if (hashedInput === hashedCorrectPassword) {
+                // Store a session token
+                sessionStorage.setItem('authenticated', 'true');
                 // Redirect to the protected page
                 window.location.href = 'aolfai-backup.html';
             } else {
@@ -136,7 +144,14 @@
     </div>
 
     <script>
+        // Check if user is authenticated
+        if (!sessionStorage.getItem('authenticated')) {
+            window.location.href = 'login.html';
+        }
+
         function logout() {
+            // Clear the session
+            sessionStorage.removeItem('authenticated');
             // Redirect back to login page
             window.location.href = 'index.html';
         }
