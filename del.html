@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected Content</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+
+        .login-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .content-container {
+            display: none;  /* Initially hidden */
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 800px;
+            width: 90%;
+        }
+
+        input {
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 200px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+    <!-- Include the SHA-256 hashing library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+    <!-- Login Form -->
+    <div class="login-container" id="loginForm">
+        <h2>Enter Password</h2>
+        <input type="password" id="passwordInput" placeholder="Enter password">
+        <br>
+        <button onclick="checkPassword()">Submit</button>
+        <p class="error-message" id="errorMessage">Incorrect password. Please try again.</p>
+    </div>
+
+    <!-- Protected Content -->
+    <div class="content-container" id="protectedContent">
+        <h1>Welcome to Protected Content</h1>
+        <p>This is your protected content. Only users with the correct password can see this.</p>
+        
+        <!-- Add your protected content here -->
+        <div class="protected-section">
+            <h2>Your Secure Content Goes Here</h2>
+            <p>This is where you can put all your protected content. You can add any HTML elements, images, or other content here.</p>
+        </div>
+
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        // The hashed value of "GurudevAi1008"
+        const hashedCorrectPassword = "a4e25ef67e12a054c37d8b5eeb8ba2e75fee40c39b8d3cd52ecfdc3d25848644";
+        
+        // Check if user was previously authenticated
+        window.onload = function() {
+            if (sessionStorage.getItem('authenticated')) {
+                showContent();
+            }
+        };
+
+        function checkPassword() {
+            const passwordInput = document.getElementById('passwordInput');
+            const errorMessage = document.getElementById('errorMessage');
+            
+            // Hash the input password
+            const hashedInput = CryptoJS.SHA256(passwordInput.value).toString();
+            
+            if (hashedInput === hashedCorrectPassword) {
+                // Store authentication in session storage
+                sessionStorage.setItem('authenticated', 'true');
+                showContent();
+            } else {
+                errorMessage.style.display = 'block';
+                passwordInput.value = '';
+            }
+        }
+
+        function showContent() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('protectedContent').style.display = 'block';
+        }
+
+        function logout() {
+            // Clear the session
+            sessionStorage.removeItem('authenticated');
+            // Show login form again
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('protectedContent').style.display = 'none';
+            document.getElementById('passwordInput').value = '';
+            document.getElementById('errorMessage').style.display = 'none';
+        }
+
+        // Allow Enter key to submit
+        document.getElementById('passwordInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+    </script>
+</body>
+</html>
