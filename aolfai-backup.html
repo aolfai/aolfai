@@ -725,43 +725,7 @@ solutions: "One click marketing studio where teachers/volunteers simply input th
     </script>
 
 
-<script>
-    const correctPassword = "secret123"; // Change this to your desired password
 
-    function checkPassword() {
-        const passwordInput = document.getElementById('passwordInput');
-        const loginForm = document.getElementById('loginForm');
-        const protectedContent = document.getElementById('protectedContent');
-        const errorMessage = document.getElementById('errorMessage');
-
-        if (passwordInput.value === correctPassword) {
-            loginForm.style.display = 'none';
-            protectedContent.style.display = 'block';
-            errorMessage.style.display = 'none';
-        } else {
-            errorMessage.style.display = 'block';
-            passwordInput.value = '';
-        }
-    }
-
-    function logout() {
-        const loginForm = document.getElementById('loginForm');
-        const protectedContent = document.getElementById('protectedContent');
-        const passwordInput = document.getElementById('passwordInput');
-        
-        loginForm.style.display = 'block';
-        protectedContent.style.display = 'none';
-        passwordInput.value = '';
-        errorMessage.style.display = 'none';
-    }
-
-    // Allow Enter key to submit
-    document.getElementById('passwordInput').addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            checkPassword();
-        }
-    });
-</script>
 
 
 </body>
