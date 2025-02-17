@@ -410,94 +410,47 @@
 </div>
 
 <script>
-    const correctPassword = "GurudevAolAi2025";
-
+    // Password Protection Script
+    const correctPassword = "GurudevAolAi2025"; // Change this to your desired password
+    
     function checkPassword() {
-        const password = document.getElementById('password-input').value;
-        if (password === correctPassword) {
-            document.getElementById('password-overlay').style.display = 'none';
-            document.getElementById('main-content').classList.remove('content-hidden');
+        const passwordInput = document.getElementById('password-input');
+        const errorMessage = document.getElementById('error-message');
+        const overlay = document.getElementById('password-overlay');
+        const mainContent = document.getElementById('main-content');
+        
+        if (passwordInput.value === correctPassword) {
+            overlay.style.display = 'none';
+            mainContent.classList.remove('content-hidden');
+            // Store in session storage so refresh doesn't require re-entry
             sessionStorage.setItem('passwordEntered', 'true');
-            loadProjects();
         } else {
-            document.getElementById('error-message').classList.remove('hidden');
+            errorMessage.classList.remove('hidden');
+            passwordInput.value = '';
         }
     }
 
-    async function loadProjects() {
-        try {
-            const response = await fetch('projects.json');
-            const data = await response.json();
-            displayProjects(data.projects);
-        } catch (error) {
-            console.error("Error loading projects:", error);
+	 function logout() {
+            sessionStorage.removeItem('passwordEntered');
+            document.getElementById('password-overlay').style.display = 'flex';
+            document.getElementById('main-content').classList.add('content-hidden');
+            document.getElementById('password-input').value = '';
+            document.getElementById('error-message').classList.add('hidden');
         }
-    }
 
-    document.addEventListener("DOMContentLoaded", () => {
-fetch("projects.json")
-    .then(response => response.json())
-    .then(data => {
-        displayProjects(data.projects);
-    })
-    .catch(error => console.error("Error loading projects:", error));
-});
+    // Allow Enter key to submit
+    document.getElementById('password-input').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            checkPassword();
+        }
+    });
 
-
-function displayProjects(projects) {
-const container = document.getElementById("projects-container");
-container.innerHTML = ""; // Clear any existing content
-
-projects.forEach(project => {
-    const projectCard = document.createElement("div");
-    projectCard.className = "project-card";
-    projectCard.innerHTML = `
-        <h3>${project.title}</h3>
-        <p class="team">Team: ${project.team}</p>
-        <p class="description">${project.description.substring(0, 150)}...</p>
-        <button onclick="openModal(${project.id})">Learn More</button>
-    `;
-    container.appendChild(projectCard);
-});
-}
-
-
-function openModal(projectId) {
-fetch("projects.json")
-    .then(response => response.json())
-    .then(data => {
-        const project = data.projects.find(p => p.id === projectId);
-        document.getElementById("modal-title").textContent = project.title;
-        document.getElementById("modal-team").textContent = `Team: ${project.team}`;
-        document.getElementById("modal-description").textContent = project.description;
-        document.getElementById("modal-problem").textContent = project.problemstatement;
-        document.getElementById("modal-solutions").textContent = project.solutions;
-        document.getElementById("modal-join").href = project.joinLink;
-        document.getElementById("project-modal").classList.remove("hidden");
-    })
-    .catch(error => console.error("Error loading project details:", error));
-}
-
-document.querySelector(".close").onclick = function () {
-document.getElementById("project-modal").classList.add("hidden");
-};
-
-window.onclick = function (event) {
-if (event.target == document.getElementById("project-modal")) {
-    document.getElementById("project-modal").classList.add("hidden");
-}
-};
-
+    // Check if password was already entered in this session
     window.onload = function() {
         if (sessionStorage.getItem('passwordEntered') === 'true') {
             document.getElementById('password-overlay').style.display = 'none';
             document.getElementById('main-content').classList.remove('content-hidden');
-            loadProjects();
         }
-   
-
-    
-
         displayProjects(); // Your existing onload function
     };
 
@@ -874,10 +827,5 @@ solutions: "One click marketing studio where teachers/volunteers simply input th
 
         window.onload = displayProjects;
     </script>
-</body>
-</html>
-
-
-   
 </body>
 </html>
