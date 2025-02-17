@@ -1,0 +1,22 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "AI Volunteer: Student care through AI automation [Art of Living AI]",
+            "team": "Apoorva Acharya",
+            "description": "Our mission is to empower teachers with AI-driven automation and voice support...",
+            "problemstatement": "Users are AOL Teachers and beneficiaries are students...",
+            "solutions": "",
+            "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8"
+        },
+        {
+            "id": 2,
+            "title": "Personal Branding Framework for Synergetic Diverse Outreach",
+            "team": "Nisha Balani",
+            "description": "Agentic AI Assistant for Teacher Empowerment",
+            "problemstatement": "Art of Living Teachers globally that do not know how to market...",
+            "solutions": "This advanced AI-powered agent is designed to support teachers...",
+            "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8"
+        }
+    ]
+}
