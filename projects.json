@@ -9,9 +9,13 @@
         "description": "A chatbot that helps new users learn about AOL courses, meditation techniques, and upcoming events.",
         "image": "chatbot.jpg"
     },
+
     {
         "title": "Social Media for Good",
         "description": "An AI system that generates positive, inspiring social media content to counter misinformation and promote mental well-being.",
         "image": "social-media.jpg"
     }
+
+
+    
 ]
