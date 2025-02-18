@@ -1,22 +1,35 @@
-{
-    "projects": [
-        {
-            "id": 1,
-            "title": "AI Volunteer: Student care through AI automation [Art of Living AI]",
-            "team": "Apoorva Acharya",
-            "description": "Our mission is to empower teachers with AI-driven automation and voice support...",
-            "problemstatement": "Users are AOL Teachers and beneficiaries are students...",
-            "solutions": "",
-            "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8"
-        },
-        {
-            "id": 2,
-            "title": "Personal Branding Framework for Synergetic Diverse Outreach",
-            "team": "Nisha Balani",
-            "description": "Agentic AI Assistant for Teacher Empowerment",
-            "problemstatement": "Art of Living Teachers globally that do not know how to market...",
-            "solutions": "This advanced AI-powered agent is designed to support teachers...",
-            "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8"
-        }
-    ]
-}
+[
+    {
+        "title": "AI Volunteer: Student Care Through AI Automation [Art of Living AI]",
+        "team": "Apoorva Acharya",
+        "description": "Our mission is to empower teachers with AI-driven automation and voice support, enabling them to efficiently engage with students, gain insights into their progress, and foster a supportive environment. By streamlining communication and providing a personalized experience, we aim to significantly enhance student care and overall engagement. By transforming the traditional engagement approach, which is often one student at a time, teachers are empowered to reach multiple students simultaneously, achieving an order of magnitude increase in efficiency.",
+        "solutions": " ",
+        "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
+        "problemstatement": "<div class='modal-section-content'>\
+            <p>Users are AOL Teachers and beneficiaries are students that have at least completed the Part 1 Course.</p>\
+            <strong>Pain Points</strong>\
+            <ol>\
+                <li><strong>Manual and time-consuming outreach:</strong> Teachers have to manually contact each student through phone calls or other methods, which becomes increasingly difficult as the number of students grows. This process becomes even more strenuous as the number of students and events/activities increase over time.</li>\
+                <li><strong>Lack of visibility into student progress:</strong> Teachers do not have a system that provides insights into student progress and their journey, making it challenging to offer targeted support and guidance. For example, if a teacher knew that a student had already completed the Art of Living Part 2 Course, they could tailor the message and inspire them to do advanced courses like the Volunteer Training Program.</li>\
+                <li><strong>Inefficient communication:</strong> The absence of an easy-to-use interface for drafting, reviewing, and sending messages to students leads to communication inefficiencies. Without visibility into a student's Art of Living journey, teachers often send messages that may not be relevant or engaging.</li>\
+                <li><strong>Hard-to-use user interface:</strong> Today, teachers often need to use a computer and go through several steps just to send messages.</li>\
+                <li><strong>Low student retention:</strong> Inadequate engagement and support contribute to low student retention rates.</li>\
+            </ol>\
+        </div>"
+    },
+    {
+        "title": "Personal Branding Framework for Synergetic Diverse Outreach",
+        "team": "Nisha Balani",
+        "description": "Agentic AI Assistant for Teacher Empowerment",
+        "problemstatement": "Art of Living Teachers globally struggle with marketing and presenting themselves to well-established yoga businesses. They need a way to build synergetic and sustainable relationships that will grow their student pipeline efficiently and at scale.",
+        "solutions": "<p>This advanced AI-powered agent is designed to support teachers in building a robust personal brand and streamlining their professional journey. Its capabilities include:</p>\
+            <ul>\
+                <li>Generating a personalized branding framework, such as an Art of Living Resume, tailored cover letters, concise biography summaries, and digital stationery like customized email signatures with integrated logos.</li>\
+                <li>Providing actionable guidance on identifying high-quality, well-rated yoga studios nationwide, focusing on those that align with holistic mental well-being.</li>\
+                <li>Simplifying outreach by automatically generating professional and persuasive emails for initiating partnerships. These pitches highlight the teacher’s ability to offer services such as weekly meditation sessions, Stress & Anxiety Protocols, or Art of Living courses when suitable.</li>\
+                <li>Managing the teacher’s schedule centrally, preventing conflicts across multiple commitments, such as yoga studios, courses, and community meetups.</li>\
+            </ul>\
+            <p><strong>Core Objective:</strong> Capitalize on the opportunities within yoga studios nationwide—spaces where audiences already appreciate the value of the mind-body connection, are accustomed to paying for quality instruction, and are open to meditation. This AI ensures teachers are legally protected through studio agreements while establishing them as credible meditation experts. The result is a sustainable and organic outreach model that generates diverse leads, raises mainstream awareness, and expands the teacher’s impact—all while minimizing the time and effort required for relationship-building and logistical coordination.</p>",
+        "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8"
+    }
+]
