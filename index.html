@@ -46,7 +46,7 @@
 
     async function openModal(index) {
         try {
-            const response = await fetch('projects.json');
+            const response = await fetch('modal.json');
             const data = await response.json();
             const project = data.projects[index];
 
