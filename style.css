@@ -1,0 +1,197 @@
+       /* Base font settings */
+        body {
+            font-family: 'Work Sans', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6, .font-serif {
+            font-family: 'Lora', serif;
+        }
+
+         /* Password protection styles */
+         #password-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #password-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 90%;
+            width: 400px;
+        }
+
+        .content-hidden {
+            display: none;
+        }
+
+    
+    
+        /* Previous styles */
+        .gradient-bg {
+            background: linear-gradient(#FEF7E3, #FFFAED 0%, #FFFBF2 100%);
+        }
+        
+        /* Added modal and project tile styles */
+        .project-tile {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            border-radius: 12px;
+            padding: 30px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow-y: auto;
+        }
+
+        .modal-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: #666;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .hero-bg {
+            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url('https://github.com/aolfai/aolfai/blob/main/gurudevai-bgk.png?raw=true');
+            background-size: cover;
+            background-position: center;
+           /* background-attachment:fixed;*/
+        }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            /*-webkit-backdrop-filter: blur(10px);*/
+        }
+        
+        .event-date {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .bg-blue-600{
+        	background-color:#FF7E00;
+        }
+
+        /*Add this CSS to format text in modal window*/
+    const additionalStyles = `
+    .modal-section-content h3 {
+        color: #2c3e50;
+        margin: 20px 0 10px 0;
+        font-size: 1.3rem;
+    }
+
+    .modal-section-content ul, 
+    .modal-section-content ol {
+        margin-left: 20px;
+        margin-bottom: 15px;
+    }
+
+    .modal-section-content ul li, 
+    .modal-section-content ol li {
+        margin: 8px 0;
+        line-height: 1.4;
+    }
+
+    .modal-section-content ul ul, 
+    .modal-section-content ol ul {
+        margin-top: 5px;
+        margin-left: 20px;
+    }
+
+    .modal-section-content strong {
+        color: #34495e;
+    }
+
+    .modal-section-content p {
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+    .glass-nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .beige-bg {
+            background-color: #FFFBEF;
+        }
+
+        /* Desktop styles */
+        @media (min-width: 768px) {
+            .hero-bg {
+                
+                background-size: cover;
+                background-position: right 80px;
+                min-height: calc(100vh + 80px);
+                padding-top: 10px;
+            }
+        }
+
+        /* Mobile styles */
+        @media (max-width: 767px) {
+            .hero-bg {
+                
+                background-size: contain;
+                background-position: center 120px;
+                background-repeat: no-repeat;
+                background-color: black;
+                min-height: 100vh;
+                padding-top: 30vh;
+            }
+        }
