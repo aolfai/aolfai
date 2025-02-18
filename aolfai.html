@@ -752,27 +752,7 @@ solutions: "One click marketing studio where teachers/volunteers simply input th
 
         ];
 
-        const industries = ["Healthcare", "Finance", "Education", "Transportation", "Manufacturing", "Retail", "Energy", "Technology", "Security", "Communication"];
-        const technologies = ["Blockchain", "IoT", "AR/VR", "Robotics", "Cloud Computing", "5G", "Edge Computing", "Big Data", "Machine Learning", "Cybersecurity"];
-        const leads = ["Emma Watson", "Michael Zhang", "Sofia Rodriguez", "James Kim", "Laura Chen", "David Patel", "Maria Garcia", "Tom Anderson", "Priya Shah", "Marcus Lee"];
-
-        while (projects.length < 1) {
-            const index = projects.length + 1;
-            const industry = industries[Math.floor(Math.random() * industries.length)];
-            const tech = technologies[Math.floor(Math.random() * technologies.length)];
-            const lead = leads[Math.floor(Math.random() * leads.length)];
-            
-            projects.push({
-                title: `${industry} ${tech} Innovation`,
-                team: `${industry} Innovation Team`,
-                lead: lead,
-                description: `Next-generation ${tech} solution for ${industry.toLowerCase()} sector, focusing on digital transformation and operational excellence.`,
-                problemstatement: `Leading-edge ${tech} implementation in ${industry.toLowerCase()}, addressing critical challenges and opportunities. Our solution provides comprehensive capabilities for process optimization, data analysis, and secure operations.`,
-                solutions: `Enterprise-grade ${tech} platform with industry-specific features. Scalable architecture and robust security measures.`,
-                joinLink: `https://forms.gle/form${index}`
-            });
-        }
-
+       
         function displayProjects() {
             const container = document.querySelector(".project-container");
             container.innerHTML = "";
