@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Meet AI - The Art of Living Presents: AI Demo Day ✨💡</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
    
-    <link rel="stylesheet" href="style.css">
-    <script src="script1.js"></script>
+   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    
     
 </head>
 <body class="bg-gray-50">
-    <!-- Password Protection Overlay -->
-    <div id="password-overlay">
+
+     <!-- Password Protection Overlay -->
+     <div id="password-overlay">
         <div id="password-box" class="shadow-lg">
             <img src="https://www.artofliving.org/img/ic-logo.svg" alt="Logo" class="h-16 mx-auto mb-6">
             <h2 class="text-2xl font-bold mb-4">Welcome to AI Demo Day</h2>
@@ -24,90 +25,344 @@
         </div>
     </div>
 
-    <div id="main-content" class="content-hidden">
-        <!-- Header -->
-        <header class="fixed w-full z-50">
-            <nav class="beige-bg py-3 shadow-sm">
-                <div class="container mx-auto px-6">
-                    <div class="flex items-center justify-between">
-                        <div class="flex-1 text-center">
-                            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 tracking-tight">
-                                Art of Living<br><span class="text-lg">AI Demo Day</span>
-                            </h1>
-                        </div>
-                        <div class="hidden md:block">
-                            <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
-                                Contact
-                            </a>
-                        </div>
+
+     <!-- Simplified Header -->
+
+     <div id="main-content" class="content-hidden">
+     <header class="fixed w-full z-50">
+        <nav class="beige-bg py-3 shadow-sm">
+            <div class="container mx-auto px-6">
+                <div class="flex items-center justify-between">
+                    <div class="flex-1 text-center">
+                        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 tracking-tight">
+                            Art of Living<br><span class="text-lg">AI Demo Day</span>
+                        </h1>
+                    </div>
+                    
+                    <!-- Optional: Contact button aligned to right -->
+                    <div class="hidden md:block">
+                        <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
+                            Contact
+                        </a>
+			   <!-- <button onclick="logout()" class="btn btn-danger">Logout</button>-->
                     </div>
                 </div>
-            </nav>
-        </header>
-
-        <!-- About Section -->
-        <section class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
-                    <div id="ideas"></div>
-                    <br><br><br>
-                    <p>Join us for a transformative journey where technology meets well-being! The AI Demo Day unites passionate minds to create AI-driven solutions to address pain points in Art of Living including supporting teachers, lead generation, handling misinformation, better recommendations of AOL content, and more!</p><br>
-                    <p>From intelligent chatbots, Social Media for good AI agents, to AI Teacher assistants and more, let's harness AI to accelerate the impact of Art of Living for everyone 🚀</p><br>
-                    <p>Be part of the movement shaping the future of mental health through AI-driven innovation!</p>
-                </p>
             </div>
-        </section>
+        </nav>
+    </header>
 
-        <!-- Project Ideas Section -->
-        <section class="py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-12 text-center">Project Ideas</h2>
-                <div class="project-container"></div>
+
+     <!-- Header -->
+    <!-- <header class="fixed w-full z-50">
+        <nav class="glass-nav py-4">
+            <div class="container mx-auto px-6">-->
+                <!-- Mobile: Center logo and text -->
+                <!--<div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <img src="https://www.artofliving.org/img/ic-logo.svg" alt="Logo" class="h-16 md:h-12 mb-2 md:mb-0">
+                        <span class="text-white font-bold text-xl md:ml-3">AI Meets AI</span>
+                    </div>
+                    
+                    <div class="hidden md:flex items-center space-x-8 mt-4 md:mt-0">
+                        <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">Contact</a>
+                    </div>
+                    
+                    <button class="md:hidden absolute right-6 top-6 text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
-        </section>
+        </nav>
+    </header>
 
-        <!-- Modal -->
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <div class="modal-header">
-                    <h1 id="modal-title" class="text-3xl font-bold mb-4"></h1>
-                    <p class="text-lg mb-2">Team: <span id="modal-team"></span></p>
+
+     <!-- Header -->
+   <!--  <header class="fixed w-full z-50">
+        <nav class="glass-nav py-4">
+            <div class="container mx-auto px-6 flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="https://www.artofliving.org/img/ic-logo.svg" alt="Logo" class="h-30 w-30">
+                    <span class="ml-3 text-white font-bold text-xl">AI Meets AI</span>
                 </div>
-                <div class="mb-6">
-                    <h2 class="text-xl font-bold mb-2">Description</h2>
-                    <p id="modal-description" class="text-gray-700"></p>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                   <!-- <a href="#" class="text-white hover:text-blue-200 transition-colors">Home</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition-colors">Schedule</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition-colors">Speakers</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition-colors">Sponsors</a>-->
+                <!--    <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">Contact</a>
                 </div>
-                <div class="mb-6">
-                    <h2 class="text-xl font-bold mb-2">Problem Statement</h2>
-                    <p id="modal-details" class="text-gray-700"></p>
-                </div>
-                <div class="mb-6">
-                    <h2 class="text-xl font-bold mb-2">Solutions</h2>
-                    <p id="modal-solutions" class="text-gray-700"></p>
-                </div>
-                <a id="join-button" href="#" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors" target="_blank">Join the Team</a>
+                
+                <button class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>-->
+
+    <!-- Hero Section -->
+   <!-- <section class="hero-bg min-h-screen flex items-center">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl">
+                <h1 class="text-6xl font-bold text-white mb-4">AI Meet AI</h1>
+                <!--<div class="event-date mb-8">
+                    <p class="text-3xl text-blue-300 font-light">May 13-14, 2025</p>
+                    <p class="text-xl text-gray-300 mt-2">Seattle, WA</p>
+                </div>-->
+              <!--  <p class="text-xl text-gray-200 mb-8">Step Into the Future of Transformation ✨ A Day of Innovation, Insight & Inner Connection through AI</p>
+                <a href="#ideas" class="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors inline-block">Join the team</a>
             </div>
         </div>
+    </section>-->
 
-        <!-- Footer -->
-        <footer class="gradient-bg text-beige py-8">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <div class="mb-4 md:mb-0">
-                        <h3 class="text-xl font-bold">AI Meets AI</h3>
-                        <a name="ideas">
-                            <p>Be part of the movement shaping the future of mental health through AI-driven innovation!</p>
-                        </a>
-                    </div>
-                    <div class="flex space-x-6">
-                        <a href="mailto:aol.aidemoday@gmail.com" class="hover:text-gray-300">Contact</a>
-                    </div>
+
+   
+
+
+
+    <!-- Header Section -->
+    <!--<header class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <img src="/api/placeholder/300/200" alt="Left Event Image" class="rounded-lg shadow-lg mb-4 md:mb-0">
+                <div class="text-center md:mx-8">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">TechnovateX 2025</h1>
+                    <p class="text-xl mb-2">March 15-16, 2025</p>
+                    <p class="text-xl">Silicon Valley Convention Center</p>
                 </div>
+                <img src="/api/placeholder/300/200" alt="Right Event Image" class="rounded-lg shadow-lg mt-4 md:mt-0">
             </div>
-        </footer>
+        </div>
+    </header>-->
+
+    <!-- About Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <!--<h2 class="text-3xl font-bold mb-8 text-center">AI Demo Day</h2>-->
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                <div id="ideas"></div> <!--Art of Living Presents <br>AI Demo Day --><br><br><br>
+
+<p>Join us for a transformative journey where technology meets well-being! The AI Demo Day unites passionate minds to create AI-driven solutions to address pain points in Art of Living including supporting teachers, lead generation, handling misinformation, better recommendations of AOL content, and more!</p><br>
+
+<p>From intelligent chatbots, Social Media for good AI agents, to AI Teacher assistants and more, let’s harness AI to accelerate the impact of Art of Living for everyone 🚀</p><br>
+
+<p>Be part of the movement shaping the future of mental health through AI-driven innovation!<br>
+
+            </p>
+        </div>
+    </section>
+
+    <!-- Project Ideas Section -->
+  
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Project Ideas</h2>
+            <div class="project-container"></div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-header">
+                <h1 id="modal-title" class="text-3xl font-bold mb-4"></h1>
+                <p class="text-lg mb-2">Team: <span id="modal-team"></span></p>
+                <!--<p class="text-lg mb-4">Lead: <span id="modal-lead"></span></p>-->
+            </div>
+            <div class="mb-6">
+                <h2 class="text-xl font-bold mb-2">Description</h2>
+                <p id="modal-description" class="text-gray-700"></p>
+            </div>
+            <div class="mb-6">
+                <h2 class="text-xl font-bold mb-2">Problem Statement</h2>
+                <p id="modal-details" class="text-gray-700"></p>
+            </div>
+            <div class="mb-6">
+                <h2 class="text-xl font-bold mb-2">Solutions</h2>
+                <p id="modal-solutions" class="text-gray-700"></p>
+            </div>
+            <a id="join-button" href="#" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors" target="_blank">Join the Team</a>
+            <button onclick="openModal()" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">Join Now</button>
+
+        </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="gradient-bg text-beige py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">AI Meets AI</h3>
+                   <a name="ideas"> <p>Be part of the movement shaping the future of mental health through AI-driven innovation!
+
+                   </p></a>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="mailto:aol.aidemoday@gmail.com" class="hover:text-gray-300">Contact</a>
+                    <!--<a href="#" class="hover:text-gray-300">Register</a>
+                    <a href="#" class="hover:text-gray-300">Sponsors</a>-->
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script>
+    // Password Protection Script
+    const correctPassword = "GurudevAolAi2025"; // Change this to your desired password
     
+    function checkPassword() {
+        const passwordInput = document.getElementById('password-input');
+        const errorMessage = document.getElementById('error-message');
+        const overlay = document.getElementById('password-overlay');
+        const mainContent = document.getElementById('main-content');
+        
+        if (passwordInput.value === correctPassword) {
+            overlay.style.display = 'none';
+            mainContent.classList.remove('content-hidden');
+            // Store in session storage so refresh doesn't require re-entry
+            sessionStorage.setItem('passwordEntered', 'true');
+        } else {
+            errorMessage.classList.remove('hidden');
+            passwordInput.value = '';
+        }
+    }
+
+	 function logout() {
+            sessionStorage.removeItem('passwordEntered');
+            document.getElementById('password-overlay').style.display = 'flex';
+            document.getElementById('main-content').classList.add('content-hidden');
+            document.getElementById('password-input').value = '';
+            document.getElementById('error-message').classList.add('hidden');
+        }
+
+    // Allow Enter key to submit
+    document.getElementById('password-input').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            checkPassword();
+        }
+    });
+
+    // Check if password was already entered in this session
+    window.onload = function() {
+        if (sessionStorage.getItem('passwordEntered') === 'true') {
+            document.getElementById('password-overlay').style.display = 'none';
+            document.getElementById('main-content').classList.remove('content-hidden');
+        }
+        displayProjects(); // Your existing onload function
+    };
+
+    // Projects Data and Functions
+
+    
+   
+        const projects = [
+
+            /*PROEJECT 1*/
+            {
+                title: "AI Volunteer: Student care through AI automation [Art of Living AI]",
+                team: "Apoorva Acharya,",
+                /*contact: " ",*/
+                description: "Our mission is to empower teachers with AI-driven automation and voice support, enabling them to efficiently engage with students, gain insights into their progress, and foster a supportive environment. By streamlining communication and providing a personalized experience, we aim to significantly enhance student care and overall engagement.By transforming the traditional engagement approach which is often one student at a time, teachers are empowered to reach multiple students simultaneously, achieving an order of magnitude increase in efficiency.",
+                solutions: " ",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8",
+
+                problemstatement: 
+            <div class="modal-section-content">
+                Users are AOL Teachers and beneficiaries are students that have at least completed Part 1 Course.
+                <strong>Pain Points</strong>
+                <ol>
+                    <li>1. Manual and time-consuming outreach: Teachers have to manually contact each student through phone calls or other methods, which becomes increasingly difficult as the number of students grows. This process becomes even more strenuous as the number of students grows and as the number of events/activities happening grows with time. </li>
+                    <li>2. Lack of visibility into student progress: Teachers do not have a system that provides insights into student progress and their journey, making it challenging to offer targeted support and guidance. For example, if the teacher would have known that their student had already done the Art of Living Part 2 Course, then the teacher can tailor the message and inspire him/her to do advanced courses like the Volunteer Training Program. </li>
+                    <li>3. Inefficient communication: The absence of an easy-to-use interface for drafting, reviewing, and sending messages to students leads to communication inefficiencies. With no visibility into student’s Art of Living journey today on what courses they have taken, teachers often send messages that might not interest or be relevant to them. </li>
+                    <li>4. Hard to use User interface: Today, the teacher often needs to use the computer and goes through several steps to achieve the task of sending messages.</li>
+                    <li>5. Low student retention: Inadequate engagement and support contribute to low student retention rates.</li>
+                    
+                </ol>
+            </div>
+        ,
+
+  
+            },
+
+           
+
+			/*PROEJECT 20*/
+
+            {
+                title: "Amplify Marketing Studio",
+                team: "Abhishek Ratna",
+                /*contact: " ",*/
+				description:"Bring intelligent marketing automation to automate market research and content creation so every teacher and volunteer can attract and engage audiences effortlessly.",
+                problemstatement: "Art of Living teachers and volunteers. Pains: 1. Lack marketing skills to systematically research local markets and create content/messaging that engages local audiences 2. Lack time and skills to create quality marketing content that can be distributed across marketing channels, and so they end up creating amateurish, poor content that doesn't convert. 3. Lack an understanding of best practices for different channels to create channel-appropriate content 4. Fail to generate leads and attract new audiences 5. Are stuck waiting for marketing resources to become available, and such resources are hard to find 6. Art of Living programs have a distinct tone of voice and Gurudev's wisdom must be reflected with dignity. Generic ChatGPT prompts cannot create this.",
+                
+solutions: "One click marketing studio where teachers/volunteers simply input the URL of their workshop and instantly have access to high quality marketing collateral and campaign assets to use across multiple channels.",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+
+
+
+        ];
+
+       
+        function displayProjects() {
+            const container = document.querySelector(".project-container");
+            container.innerHTML = "";
+            container.style.display = "grid";
+            container.style.gridTemplateColumns = "repeat(auto-fill, minmax(300px, 1fr))";
+            container.style.gap = "20px";
+            container.style.padding = "20px";
+
+            projects.forEach((project, index) => {
+                let projectTile = document.createElement("div");
+                projectTile.classList.add("project-tile");
+                projectTile.innerHTML = 
+                    <h3 class="text-xl font-bold mb-3">${project.title}</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">${project.description}</p>
+                    <button onclick="openModal(${index})" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">Learn More</button>
+                ;
+                container.appendChild(projectTile);
+            });
+        }
+
+        
+
+        function openModal(index) {
+            const project = projects[index];
+            document.getElementById("modal-title").textContent = project.title;
+            document.getElementById("modal-team").textContent = project.team;
+           /* document.getElementById("modal-lead").textContent = project.lead;*/
+            document.getElementById("modal-description").textContent = project.description;
+
+       
+
+            /*document.getElementById("modal-details").textContent = project.problemstatement;*/
+            document.getElementById("modal-details").innerHTML = project.problemstatement;
+            /*document.getElementById("modal-solutions").textContent = project.solutions;*/
+
+            document.getElementById("modal-solutions").innerHTML = project.solutions;
+            document.getElementById("join-button").href = project.joinLink;
+            document.getElementById("modal").style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        window.onclick = function(event) {
+            if (event.target === document.getElementById("modal")) {
+                closeModal();
+            }
+        };
+
+        window.onload = displayProjects;
+    </script>
 </body>
 </html>
