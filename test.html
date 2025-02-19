@@ -1,61 +1,167 @@
-<html>
-  <head></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic JSON Data with Modal</title>
+    <style>
+      /* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
 
-<body>
-<!-- HTML & JavaScript to Fetch JSON -->
-<section class="py-8 bg-gray-0">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-6">Project Ideas</h2>
-        <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-    </div>
-</section>
-<!-- Modal -->
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <span onclick="closeModal()" class="cursor-pointer float-right">&times;</span>
-        <h3 id="modal-title" class="text-xl font-bold mb-4"></h3>
-        <img id="modal-image" src="" class="w-full mb-4">
-        <p id="modal-description" class="text-gray-700"></p>
-    </div>
-</div>
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
 
-<script>
-    async function fetchProjects() {
-        try {
-            const response = await fetch('projects.json');
-            const data = await response.json();
-            const container = document.getElementById('projects-container');
-            
-            data.projects.forEach(project => {
-                const projectTile = document.createElement('div');
-                projectTile.className = 'project-tile';
-                projectTile.innerHTML = `
-                    <div class="project-content">
-                        <img src="${project.image}" class="w-full rounded-lg mb-4" alt="${project.title}">
-                        <h3 class="text-lg font-semibold">${project.title}</h3>
-                        <p class="project-description text-gray-600">${project.description}</p>
-                        <button onclick="openModal('${project.title}', '${project.description}', '${project.image}')" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-full">Learn More</button>
-                    </div>
-                `;
-                container.appendChild(projectTile);
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+.data-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.data-item {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+.data-item:hover {
+    transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+    </style>
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const dataContainer = document.getElementById("data-container");
+    const modal = document.getElementById("modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalDescription = document.getElementById("modal-description");
+    const closeModal = document.querySelector(".close");
+
+    // Fetch JSON data
+    fetch("projects.json")
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(item => {
+                const div = document.createElement("div");
+                div.classList.add("data-item");
+                div.textContent = item.title;
+                div.addEventListener("click", () => openModal(item));
+                dataContainer.appendChild(div);
             });
-        } catch (error) {
-            console.error('Error fetching projects:', error);
+        })
+        .catch(error => console.error("Error loading JSON:", error));
+
+    // Open Modal
+    function openModal(item) {
+        modalTitle.textContent = item.title;
+        modalDescription.textContent = item.description;
+        modal.style.display = "flex";
+    }
+
+    // Close Modal
+    closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    // Close Modal on clicking outside
+    window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
         }
-    }
+    });
+});
 
-    function openModal(title, description, image) {
-        document.getElementById('modal-title').textContent = title;
-        document.getElementById('modal-description').textContent = description;
-        document.getElementById('modal-image').src = image;
-        document.getElementById('modal').style.display = 'block';
-    }
+  </script>
+</head>
+<body>
 
-    function closeModal() {
-        document.getElementById('modal').style.display = 'none';
-    }
+    <!-- Header -->
+    <header>
+        <h1>My Website</h1>
+    </header>
 
-    window.onload = fetchProjects;
-</script>
+    <!-- Main Content -->
+    <main>
+        <h2>Data List</h2>
+        <div class="data-container" id="data-container">
+            <!-- Dynamic content from JSON will be inserted here -->
+        </div>
+    </main>
+
+    <!-- Modal Window -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-  </html>
+</html>
