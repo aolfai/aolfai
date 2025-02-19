@@ -89,6 +89,37 @@ main {
 
     </style>
 
+ 
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>My Website</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h2>Data List</h2>
+        <div class="data-container" id="data-container">
+            <!-- Dynamic content from JSON will be inserted here -->
+        </div>
+    </main>
+
+    <!-- Modal Window -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+    </footer>
+
   <script>
 document.addEventListener("DOMContentLoaded", () => {
     const dataContainer = document.getElementById("data-container");
@@ -132,36 +163,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
   </script>
-</head>
-<body>
-
-    <!-- Header -->
-    <header>
-        <h1>My Website</h1>
-    </header>
-
-    <!-- Main Content -->
-    <main>
-        <h2>Data List</h2>
-        <div class="data-container" id="data-container">
-            <!-- Dynamic content from JSON will be inserted here -->
-        </div>
-    </main>
-
-    <!-- Modal Window -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 id="modal-title"></h2>
-            <p id="modal-description"></p>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 My Website. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
