@@ -1,4 +1,17 @@
+<!-- JSON File (projects.json) -->
 {
-    "title": "Join the AI Demo Day!",
-    "content": "Want to contribute to AI-powered innovations for the Art of Living? Sign up now and be part of the revolution!"
+  "projects": [
+    {
+      "id": 1,
+      "title": "AI-Powered Lead Generation",
+      "description": "Using AI to enhance lead generation and improve outreach.",
+      "image": "https://example.com/image1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "AI-Driven Misinformation Handling",
+      "description": "An AI system to detect and counter misinformation.",
+      "image": "https://example.com/image2.jpg"
+    }
+  ]
 }
