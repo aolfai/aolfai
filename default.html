@@ -214,6 +214,27 @@
        .bg-blue-600{
         	background-color:#cb80ff;
         }
+
+         .project-tile {
+        background: white;
+        border-radius: 8px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        display: flex;           /* Add this */
+        flex-direction: column;  /* Add this */
+        height: 100%;           /* Add this */
+    }
+
+    .project-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-description {
+        flex-grow: 1;
+    }
 }
     </style>
 </head>
@@ -337,26 +358,49 @@
             },
         ];
 
-        // Display Projects
-        function displayProjects() {
-            const container = document.querySelector(".project-container");
-            container.innerHTML = "";
-            container.style.display = "grid";
-            container.style.gridTemplateColumns = "repeat(auto-fill, minmax(300px, 1fr))";
-            container.style.gap = "20px";
-            container.style.padding = "20px";
 
+        // Display Projects - Orginal
+       /* function displayProjects() {
+            const container = document.querySelector(".project-container");
             projects.forEach((project, index) => {
-                let projectTile = document.createElement("div");
-                projectTile.classList.add("project-tile");
-                projectTile.innerHTML = `
+                const projectEl = document.createElement("div");
+                projectEl.className = "project-tile";
+                projectEl.innerHTML = `
                     <h3 class="text-xl font-bold mb-3">${project.title}</h3>
-                    <p class="text-gray-600 mb-4 flex-grow">${project.description}</p>
-                    <button onclick="openModal(${index})" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">Learn More</button>
+                    <p class="text-gray-600 mb-4">${project.description}</p>
+                    <button onclick="openModal(${index})" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
+                        Learn More
+                    </button>
                 `;
-                container.appendChild(projectTile);
+                container.appendChild(projectEl);
             });
-        }
+        }*/
+        
+        <script>
+    function displayProjects() {
+        const container = document.querySelector(".project-container");
+        container.innerHTML = "";
+        container.style.display = "grid";
+        container.style.gridTemplateColumns = "repeat(auto-fill, minmax(300px, 1fr))";
+        container.style.gap = "20px";
+        container.style.padding = "20px";
+
+        projects.forEach((project, index) => {
+            let projectTile = document.createElement("div");
+            projectTile.classList.add("project-tile");
+            projectTile.innerHTML = `
+                <div class="project-content">
+                    <h3 class="text-xl font-bold mb-3">${project.title}</h3>
+                    <p class="text-gray-600 mb-4 project-description">${project.description}</p>
+                </div>
+                <button onclick="openModal(${index})" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors mt-auto">
+                    Learn More
+                </button>
+            `;
+            container.appendChild(projectTile);
+        });
+    }
+</script>
 
         // Modal Functions
         function openModal(index) {
