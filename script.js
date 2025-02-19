@@ -1,3 +1,9 @@
+// Test data in case the fetch fails
+const fallbackData = [
+    { title: "Test Project 1", description: "Description 1" },
+    { title: "Test Project 2", description: "Description 2" }
+];
+
 document.addEventListener("DOMContentLoaded", () => {
     const dataContainer = document.getElementById("data-container");
     const modal = document.getElementById("modal");
@@ -5,41 +11,41 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalDescription = document.getElementById("modal-description");
     const closeModal = document.querySelector(".close");
 
-    // Fetch JSON data
-   // fetch("projects.json")
-
-fetch("https://aolfai.github.io/aolfai/projects.json")
-
+    // Try fetching from your URL, fall back to local data if it fails
+    fetch("https://aolfai.github.io/aolfai/projects.json")
         .then(response => {
-            if (!response.ok) {
-                throw new Error("Network response was not OK");
-            }
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             return response.json();
         })
         .then(data => {
-            data.forEach(item => {
-                const div = document.createElement("div");
-                div.classList.add("data-item");
-                div.textContent = item.title;
-                div.addEventListener("click", () => openModal(item));
-                dataContainer.appendChild(div);
-            });
+            displayData(data);
         })
-        .catch(error => console.error("Error loading JSON:", error));
+        .catch(error => {
+            console.error("Error loading JSON:", error);
+            displayData(fallbackData); // Use fallback data if fetch fails
+        });
 
-    // Open Modal
+    function displayData(data) {
+        data.forEach(item => {
+            const div = document.createElement("div");
+            div.classList.add("data-item");
+            div.textContent = item.title;
+            div.addEventListener("click", () => openModal(item));
+            dataContainer.appendChild(div);
+        });
+    }
+
+    // Rest of your modal code remains the same
     function openModal(item) {
         modalTitle.textContent = item.title;
         modalDescription.textContent = item.description;
         modal.style.display = "flex";
     }
 
-    // Close Modal
     closeModal.addEventListener("click", () => {
         modal.style.display = "none";
     });
 
-    // Close Modal on clicking outside
     window.addEventListener("click", (e) => {
         if (e.target === modal) {
             modal.style.display = "none";
