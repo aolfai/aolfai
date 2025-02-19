@@ -6,7 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeModal = document.querySelector(".close");
 
     // Fetch JSON data
-    fetch("projects.json")
+   // fetch("projects.json")
+
+fetch("https://aolfai.github.io/aolfai/projects.json")
+
         .then(response => {
             if (!response.ok) {
                 throw new Error("Network response was not OK");
