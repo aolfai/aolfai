@@ -1,11 +1,11 @@
 [
     {
         "title": "AI Teacher Assistant",
-        "description": "An AI-powered assistant to help Art of Living teachers with session scheduling, answering FAQs, and providing lesson recommendations.",
+        "description": "An AI-powered assistant to help Art of Living teachers with session scheduling, answering FAQs, and providing lesson recommendations."
     },
     {
         "title": "AI Chatbot for Art of Living",
-        "description": "A chatbot that helps new users learn about AOL courses, meditation techniques, and upcoming events.",
+        "description": "A chatbot that helps new users learn about AOL courses, meditation techniques, and upcoming events."
     },
 
     {
@@ -16,3 +16,5 @@
 
     
 ]
+
+
