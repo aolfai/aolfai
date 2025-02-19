@@ -1,0 +1,61 @@
+<html>
+  <head></head>
+
+<body>
+<!-- HTML & JavaScript to Fetch JSON -->
+<section class="py-8 bg-gray-0">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-6">Project Ideas</h2>
+        <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+</section>
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span onclick="closeModal()" class="cursor-pointer float-right">&times;</span>
+        <h3 id="modal-title" class="text-xl font-bold mb-4"></h3>
+        <img id="modal-image" src="" class="w-full mb-4">
+        <p id="modal-description" class="text-gray-700"></p>
+    </div>
+</div>
+
+<script>
+    async function fetchProjects() {
+        try {
+            const response = await fetch('projects.json');
+            const data = await response.json();
+            const container = document.getElementById('projects-container');
+            
+            data.projects.forEach(project => {
+                const projectTile = document.createElement('div');
+                projectTile.className = 'project-tile';
+                projectTile.innerHTML = `
+                    <div class="project-content">
+                        <img src="${project.image}" class="w-full rounded-lg mb-4" alt="${project.title}">
+                        <h3 class="text-lg font-semibold">${project.title}</h3>
+                        <p class="project-description text-gray-600">${project.description}</p>
+                        <button onclick="openModal('${project.title}', '${project.description}', '${project.image}')" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-full">Learn More</button>
+                    </div>
+                `;
+                container.appendChild(projectTile);
+            });
+        } catch (error) {
+            console.error('Error fetching projects:', error);
+        }
+    }
+
+    function openModal(title, description, image) {
+        document.getElementById('modal-title').textContent = title;
+        document.getElementById('modal-description').textContent = description;
+        document.getElementById('modal-image').src = image;
+        document.getElementById('modal').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+
+    window.onload = fetchProjects;
+</script>
+</body>
+  </html>
