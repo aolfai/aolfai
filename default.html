@@ -340,17 +340,21 @@
         // Display Projects
         function displayProjects() {
             const container = document.querySelector(".project-container");
+            container.innerHTML = "";
+            container.style.display = "grid";
+            container.style.gridTemplateColumns = "repeat(auto-fill, minmax(300px, 1fr))";
+            container.style.gap = "20px";
+            container.style.padding = "20px";
+
             projects.forEach((project, index) => {
-                const projectEl = document.createElement("div");
-                projectEl.className = "project-tile";
-                projectEl.innerHTML = `
+                let projectTile = document.createElement("div");
+                projectTile.classList.add("project-tile");
+                projectTile.innerHTML = `
                     <h3 class="text-xl font-bold mb-3">${project.title}</h3>
-                    <p class="text-gray-600 mb-4">${project.description}</p>
-                    <button onclick="openModal(${index})" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
-                        Learn More
-                    </button>
+                    <p class="text-gray-600 mb-4 flex-grow">${project.description}</p>
+                    <button onclick="openModal(${index})" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">Learn More</button>
                 `;
-                container.appendChild(projectEl);
+                container.appendChild(projectTile);
             });
         }
 
