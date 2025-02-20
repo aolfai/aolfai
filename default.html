@@ -235,7 +235,6 @@
     .project-description {
         flex-grow: 1;
     }
-}
     </style>
 </head>
 <body>
@@ -296,7 +295,7 @@
     <section class="py-8 bg-gray-0">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold mb-6 text-center">Project Ideas</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 project-container">
+            <div id="projectContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 project-container">
 
                 <!--<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 project-container">-->
 <div class="container mx-auto px-4 max-w-4xl">
@@ -332,50 +331,7 @@
     </footer>
 
     <script>
-        // Projects Data
-        const projects = [
-            {
-                title: "AI Volunteer: Student care through AI automation",
-                team: "Apoorva Acharya",
-                description: "Our mission is to empower teachers with AI-driven automation and voice support, enabling them to efficiently engage with students, gain insights into their progress, and foster a supportive environment.",
-                problemstatement: "Users are AOL Teachers and beneficiaries are students that have at least completed Part 1 Course...",
-                solutions: "AI-driven automation system for student engagement",
-                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
-            },
-            {
-                title: "Personal Branding Framework for Synergetic Diverse Outreach",
-                team: "Nisha Balani",
-                description: "Agentic AI Assistant for Teacher Empowerment",
-                problemstatement: "Art of Living Teachers globally that do not know how to market and present themselves...",
-                solutions: "Advanced AI-powered agent for personal branding",
-                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
-            },
-
-             /*Project 3*/
-
-            {
-                title: "Datamukti",
-                team: "Keshav",
-                /*contact: " ",*/
-                description: "An Idea bank which allows for cross collaboration of individuals all across the organization leveraging Gen Ai Semantic Search / RAG functionalities for quick look up",
-                problemstatement: "Board Memembers (Key Decision Makers) - Can use this tool to find ideas proposed by individuals to solve key issues faced by the organization. Additionally it can also connect these key decision makers with the right people who could help to solve the said issue.",
-                solutions: "Essentially a Web App with a Search bar, where users can look up the work done by the organization. Think perplexity excpet for AOL specific content. A platform for collaboration.",
-                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
-            },
-
-              /*Project 3*/
-
-            {
-                title: "Datamukti",
-                team: "Keshav",
-                /*contact: " ",*/
-                description: "An Idea bank which allows for cross collaboration of individuals all across the organization leveraging Gen Ai Semantic Search / RAG functionalities for quick look up",
-                problemstatement: "Board Memembers (Key Decision Makers) - Can use this tool to find ideas proposed by individuals to solve key issues faced by the organization. Additionally it can also connect these key decision makers with the right people who could help to solve the said issue.",
-                solutions: "Essentially a Web App with a Search bar, where users can look up the work done by the organization. Think perplexity excpet for AOL specific content. A platform for collaboration.",
-                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
-            },
-        ];
-
+        let projects = [];
 
         // Display Projects - Orginal
        /* function displayProjects() {
@@ -396,27 +352,36 @@
         
      
     function displayProjects() {
-        const container = document.querySelector(".project-container");
+        const container = document.getElementById("projectContainer");
         container.innerHTML = "";
         container.style.display = "grid";
         container.style.gridTemplateColumns = "repeat(auto-fill, minmax(300px, 1fr))";
         container.style.gap = "20px";
         container.style.padding = "20px";
 
-        projects.forEach((project, index) => {
-            let projectTile = document.createElement("div");
-            projectTile.classList.add("project-tile");
-            projectTile.innerHTML = `
-                <div class="project-content">
-                    <h3 class="text-xl font-bold mb-3">${project.title}</h3>
-                    <p class="text-gray-600 mb-4 project-description">${project.description}</p>
-                </div>
-                <button onclick="openModal(${index})" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors mt-auto">
-                    Learn More
-                </button>
-            `;
-            container.appendChild(projectTile);
-        });
+        fetch("https://aolfai.github.io/aolfai/projects.json")
+            .then(response => response.json())
+            .then(data => {
+                projects = data;
+                console.log(projects);
+                data.forEach((project, index) => {
+                    const projectTile = document.createElement("div");
+                    projectTile.classList.add("project-tile");
+                    projectTile.innerHTML = `
+                        <div class="project-content">
+                            <h3 class="text-xl font-bold mb-3">${project.title}</h3>
+                            <p class="text-gray-600 mb-4 project-description">${project.description}</p>
+                        </div>
+                          <button onclick="openModal(${index})" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors mt-auto">
+                            Learn More
+                          </button>
+                    `;
+                 container.appendChild(projectTile);   
+            });
+        })
+        .catch(err => {
+            console.error("Error fetching JSON:", err);
+        })
     }
 
 
@@ -440,6 +405,10 @@
                 <div class="mb-4">
                     <h3 class="text-xl font-bold mb-2">Solutions</h3>
                     <p>${project.solutions}</p>
+                </div>
+                <div class="mb-4">
+                    <h3 class="text-xl font-bold mb-2">Available Roles</h3>
+                    <p>${project.rolesAvailble}</p>
                 </div>
                 <a href="${project.joinLink}" class="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors" target="_blank">
                     Join the Team
