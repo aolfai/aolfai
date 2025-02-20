@@ -235,7 +235,6 @@
     .project-description {
         flex-grow: 1;
     }
-}
     </style>
 </head>
 <body>
@@ -332,7 +331,7 @@
     </footer>
 
     <script>
-        const projects = [];
+        let projects = [];
 
         // Display Projects - Orginal
        /* function displayProjects() {
@@ -360,17 +359,18 @@
         container.style.gap = "20px";
         container.style.padding = "20px";
 
-        fetch("projects.json")
+        fetch("https://aolfai.github.io/aolfai/projects.json")
             .then(response => response.json())
             .then(data => {
                 projects = data;
-                data.forEach(project => {
+                console.log(projects);
+                data.forEach((project, index) => {
                     const projectTile = document.createElement("div");
                     projectTile.classList.add("project-tile");
                     projectTile.innerHTML = `
                         <div class="project-content">
-                            <h3 class="text-xl font-bold mb-3">${data.title}</h3>
-                            <p class="text-gray-600 mb-4 project-description">${data.description}</p>
+                            <h3 class="text-xl font-bold mb-3">${project.title}</h3>
+                            <p class="text-gray-600 mb-4 project-description">${project.description}</p>
                         </div>
                           <button onclick="openModal(${index})" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors mt-auto">
                             Learn More
