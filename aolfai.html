@@ -18,6 +18,31 @@
         h1, h2, h3, h4, h5, h6, .font-serif {
             font-family: 'Lora', serif;
         }
+        /* Password protection styles */
+        #password-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #password-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 90%;
+            width: 400px;
+        }
+        .content-hidden {
+            display: none;
+        }
 
         /* Header Styles */
         .sticky-header {
@@ -238,8 +263,20 @@
     </style>
 </head>
 <body>
+        <!-- Password Protection Overlay -->
+        <div id="password-overlay">
+        <div id="password-box" class="shadow-lg">
+            <img src="https://www.artofliving.org/img/ic-logo.svg" alt="Logo" class="h-16 mx-auto mb-6">
+            <h2 class="text-2xl font-bold mb-4">Welcome to AI Demo Day</h2>
+            <p class="text-gray-600 mb-6">Please enter the password to continue</p>
+            <input type="password" id="password-input" class="w-full px-4 py-2 border rounded mb-4 focus:outline-none focus:border-blue-500" placeholder="Enter password">
+            <button onclick="checkPassword()" class="w-full bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors">Enter</button>
+            <p id="error-message" class="text-red-500 mt-2 hidden">Incorrect password. Please try again.</p>
+        </div>
+    </div>
     <!-- Header -->
-    <header class="sticky-header">
+    <div id="main-content" class="content-hidden">
+    <header class="sticky-header ">
         <nav class="glass-nav">
             <div class="container mx-auto px-4">
                 <div class="flex justify-between items-center h-20">
@@ -329,8 +366,52 @@
             </div>
         </div>
     </footer>
+    </div>
 
     <script>
+        // Password Protection Script
+        const correctPassword = "GurudevAolAi2025"; // Change this to your desired password
+        
+        function checkPassword() {
+            const passwordInput = document.getElementById('password-input');
+            const errorMessage = document.getElementById('error-message');
+            const overlay = document.getElementById('password-overlay');
+            const mainContent = document.getElementById('main-content');
+            
+            if (passwordInput.value === correctPassword) {
+                overlay.style.display = 'none';
+                mainContent.classList.remove('content-hidden');
+                // Store in session storage so refresh doesn't require re-entry
+                sessionStorage.setItem('passwordEntered', 'true');
+            } else {
+                errorMessage.classList.remove('hidden');
+                passwordInput.value = '';
+            }
+        }
+
+        function logout() {
+                sessionStorage.removeItem('passwordEntered');
+                document.getElementById('password-overlay').style.display = 'flex';
+                document.getElementById('main-content').classList.add('content-hidden');
+                document.getElementById('password-input').value = '';
+                document.getElementById('error-message').classList.add('hidden');
+            }
+
+        // Allow Enter key to submit
+        document.getElementById('password-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+
+        // Check if password was already entered in this session
+        window.onload = function() {
+            if (sessionStorage.getItem('passwordEntered') === 'true') {
+                document.getElementById('password-overlay').style.display = 'none';
+                document.getElementById('main-content').classList.remove('content-hidden');
+            }
+            displayProjects(); // Your existing onload function
+        };
         let projects = [];
 
         // Display Projects - Orginal
