@@ -212,6 +212,15 @@
         "solutions": "One click marketing studio where teachers/volunteers simply input the URL of their workshop and instantly have access to high quality marketing collateral and campaign assets to use across multiple channels.",
         "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
         "rolesAvailable": "AI Scientists/Data Scientsts/ML Engineers, Back-End Engineers, Front-End Engineers, UX Designers"
+    },
+    {
+        "title": "Positivity Now",
+        "team": "Preeti Gupta",
+        "tileDescription": "AI-powered emotional support—breaking stigma with personalized guidance to navigate sadness, anxiety, and anger beyond social media distractions!",
+        "description": "bring intelligent marketing automation to automate market research and content creation so every teacher and volunteer can attract and engage audiences effortlessly.",
+        "problemstatement": "Many individuals face emotional challenges like sadness, anxiety, or anger but hesitate to seek traditional therapy due to stigma. While social media offers temporary distractions, it lacks personalized support to help users actively manage their moods. This gap highlights the need for an accessible, stigma-free solution that promotes emotional well-being.To address this, we are integrating a mood chatbot within the Sattva app, leveraging mixed-method research and device sensors to assess users’ emotional states based on mood patterns, behaviors, and environmental factors. The chatbot delivers tailored interventions, including uplifting music, motivational messages, breathwork, meditations, and prompts to connect with loved ones. By providing instant, personalized emotional support, it helps users regain balance and cultivate a positive mindset. The goal of this project is to create a seamless and intuitive digital experience that empowers users to proactively manage their mental well-being. This initiative not only enhances individual emotional resilience but also drives engagement for the Sattva app and the Art of Living Foundation. Through “Positivity Now,” we aim to make mental wellness accessible, fostering a global community focused on emotional balance and holistic well-being.",
+        "solutions": "One click marketing studio where teachers/volunteers simply input the URL of their workshop and instantly have access to high quality marketing collateral and campaign assets to use across multiple channels.",
+        "joinLink": "",
+        "rolesAvailable": "AI Scientists/Data Scientsts/ML Engineers, Data Engineers"
     }
-
 ]
