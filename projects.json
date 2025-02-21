@@ -1,12 +1,13 @@
 [
     {
         "title": "AI Volunteer: Student care through AI automation [Art of Living AI]",
-        "team": "Apoorva Acharya,",
+        "team": "Apoorva Acharya, Anshul Samar, Disha Patel, Vivek",
         "contact": " ",
+        "tileDescription": "AI-powered automation & voice support to help teachers engage, track progress, and support students—boosting efficiency & care at scale!",
         "description": "Our mission is to empower teachers with AI-driven automation and voice support, enabling them to efficiently engage with students, gain insights into their progress, and foster a supportive environment. By streamlining communication and providing a personalized experience, we aim to significantly enhance student care and overall engagement.By transforming the traditional engagement approach which is often one student at a time, teachers are empowered to reach multiple students simultaneously, achieving an order of magnitude increase in efficiency.",
         "solutions": " ",
         "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
-        "problemstatement": "Users are AOL Teachers and beneficiaries are students that have at least completed Part 1 Course.",
+        "problemstatement": "The goal of this project is to empower Art of Living teachers by streamlining student engagement. Teachers currently struggle with manual outreach, lack of progress visibility, and inefficient communication. The solution is an AI-driven platform with voice support, automating personalized communication, tracking student journeys, and offering tailored content recommendations. This increases teacher efficiency, improves student engagement, and provides data-driven insights. Key to success is a human-centered approach, incremental rollout, and a focus on practical optimization, aligning with DesignX principles to ensure the platform effectively meets teacher and student needs.",
         "PainPoints": [
             "Manual and time-consuming outreach: Teachers have to manually contact each student through phone calls or other methods, which becomes increasingly difficult as the number of students grows. This process becomes even more strenuous as the number of students grows and as the number of events/activities happening grows with time.",
             "Lack of visibility into student progress: Teachers do not have a system that provides insights into student progress and their journey, making it challenging to offer targeted support and guidance. For example, if the teacher would have known that their student had already done the Art of Living Part 2 Course, then the teacher can tailor the message and inspire him/her to do advanced courses like the Volunteer Training Program.",
@@ -14,250 +15,203 @@
             "Hard to use User interface: Today, the teacher often needs to use the computer and goes through several steps to achieve the task of sending messages.",
             "Low student retention: Inadequate engagement and support contribute to low student retention rates."
         ],
-        "rolesAvailable": [
-            "",
-            ""
-        ]
+        "rolesAvailable": ""
     },
     {
         "title": "Personal Branding Framework for Synergetic Diverse Outreach",
         "team": "Nisha Balani",
         "contact": " ",
+        "tileDescription": "Empowering Art of Living teachers with AI-driven marketing to build strong yoga partnerships, attract students, and scale effortlessly!",
         "description": "Agentic AI Assistant for Teacher Empowerment ",
-        "problemstatement": "Art of Living Teachers globally that do not know how market and present themselves to well establish yoga businesses to build synergetic and sustainable relationships to grow new student pipeline with efficiency of time and effort and do this at scale",
+        "problemstatement": "Art of Living teachers globally often lack the skills to effectively market themselves and build relationships with established yoga businesses, hindering their ability to efficiently grow their student base. This project aims to empower teachers with an AI-powered agent designed to streamline their professional journey. The agent generates personalized branding materials (resumes, cover letters, biographies), identifies high-quality yoga studios aligned with holistic well-being, and automates outreach with persuasive emails. It also manages scheduling to prevent conflicts and ensure legal protection through studio agreements. By capitalizing on the existing interest in mind-body practices within yoga studios, the AI fosters a sustainable outreach model, expands teachers' impact, generates diverse leads, and raises mainstream awareness, all while minimizing time and effort. The goal is to enable Art of Living teachers to build synergistic partnerships with yoga businesses efficiently and effectively.",
         "PainPoints": "",
         "solutions": "This advanced AI-powered agent is designed to support teachers in building a robust personal brand and streamlining their professional journey. Its capabilities include generating a personalized branding framework, such as an Art of Living Resume, tailored cover letters, concise biography summaries, and digital stationery like customized email signatures with integrated logos. The AI also offers actionable guidance on identifying high-quality, well-rated yoga studios nationwide,focusing on those whose mission aligns with promoting holistic mental well-being. It simplifies outreach by automatically generating professional and persuasive emails for initiating partnerships. These pitches can highlight the teacher’s ability to offer services such as weekly meditation sessions, Stress & Anxiety Protocols, or even the Art of Living courses when suitable.To maximize efficiency, the bot centrally manages the teacher’s schedule, preventing conflicts across multiple commitments, such as yoga studios, courses, and community meetups. Core Objective: Capitalize on the low-hanging fruit within yoga studios nationwide—spaces where audiences are already familiar with the value of the mind-body connection, are accustomed to paying for quality instruction, and are less constrained by rigid religious frameworks. This AI ensures teachers are legally protected through studio agreements while establishing them as credible meditation experts. The result is a sustainable and organic outreach model that generates diverse leads, raises mainstream awareness, and expands the teacher’s impact—all while minimizing the time and effort required for relationship-building and logistical coordination.",
         "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
-        "rolesAvailable": [
-            "",
-            ""
-        ]
+        "rolesAvailable": "AI Scientists/Data Scientsts/ML Engineers, Back-End Engineers, Front-End Engineers"
     },
     {
         "title": "Datamukti",
         "team": "Keshav",
         "contact": " ",
+        "tileDescription": "AI-powered Idea Bank for seamless cross-collaboration",
         "description": "An Idea bank which allows for cross collaboration of individuals all across the organization leveraging Gen Ai Semantic Search / RAG functionalities for quick look up",
-        "problemstatement": "Board Memembers (Key Decision Makers) - Can use this tool to find ideas proposed by individuals to solve key issues faced by the organization. Additionally it can also connect these key decision makers with the right people who could help to solve the said issue.",
+        "problemstatement": "The project addresses the challenge faced by Art of Living board members (key decision-makers) in efficiently finding and connecting with individuals proposing solutions to key organizational issues. The current process lacks a centralized platform to discover and connect with relevant expertise. The solution is a web application featuring a search bar, allowing users to easily find work done within the organization. Envisioned as a \"Perplexity for AOL-specific content,\" this platform facilitates collaboration by providing board members with a tool to quickly identify relevant ideas and connect with the right people to address critical challenges. The primary goal is to improve decision-making and problem-solving by streamlining access to internal knowledge and expertise.",
         "solutions": "Essentially a Web App with a Search bar, where users can look up the work done by the organization. Think perplexity excpet for AOL specific content. A platform for collaboration.",
         "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
-        "rolesAvailable": [
-            "",
-            ""
-        ]
+        "rolesAvailable": "AI Scientists/Data Scientsts/ML Engineers"
     },
     {
         "title": "Ai Teachers Assistant",
         "team": "Chinmaya Devaraj",
         "contact": " ",
+        "tileDescription": "Empower teachers with an AI chat assistant to track, mentor, and engage every participant effortlessly!",
         "description": "AI to  help teachers follow and support participants journey more seamlessly.",
-        "problemstatement": "We are interested in solving on critical problem to help teachers follow and support participants journey more seamlessly. Continued engagement with past participants falls off in due time as we keep teaching courses. The existing way of communication with our sky graduates is through emails and WhatsApp groups. We don’t have an active and standardized way of tracking whether they are reading the messages or interacting through the app To solve this we need an AI assistant that can help teachers with a centralized communication. Ai assistant in the form of a chat interface will send info about upcoming courses, follow-ups, etc. It will also have personalized challenge or mentoring option so that existing sky graduates are mentored. It’s a chat-based interface that is personalized allowing teacher to monitor what is going on with all the participants and also have options for teacher to type and communicate with all existing participants.",
+        "problemstatement": "Art of Living teachers face declining engagement with SKY graduates due to fragmented communication and a lack of progress tracking. The SKY Companion, an AI-powered engagement hub, solves this by centralizing communication within a chat interface. The AI automates personalized messaging, suggests tailored mentoring activities, and provides insights into graduate engagement. This approach boosts retention, enhances teacher efficiency, and offers data-driven insights for effective support. Following DesignX principles, the platform emphasizes iterative development, teacher collaboration, and user-friendly design to ensure a practical and impactful solution. The goal is to empower teachers to effortlessly track, mentor, and support SKY graduates, fostering a thriving community and promoting long-term participation in Art of Living.",
         "solutions": "",
         "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
-        "rolesAvailable": [
-            "",
-            ""
-        ]
+        "rolesAvailable": "AI Scientists/Data Scientsts/ML Engineers, Front-End Engineers, UX Designer"
     },
     {
         "title": "Art of Living Intro Talk Mentor Bot",
         "team": "Akshay Gaur",
         "contact": " ",
+        "tileDescription": "AI-powered coaching for Art of Living presenters—boosting confidence, refining delivery, and mastering objections for higher course enrollments!",
         "description": "An AI-powered mobile application designed to: Simulate realistic participant interactions with diverse objection scenarios",
-        "problemstatement": "Presenters of the Art of Living Intro Talk face challenges in effectively delivering their material and confidently closing the talk to enroll participants into the Part 1 course. They often struggle with handling objections such as time constraints or cost concerns. Traditional training methods via Zoom calls with teachers lack the dynamic, interactive feedback necessary to refine these skills in real-world scenarios.",
+        "problemstatement": "Art of Living Intro Talk presenters face challenges in confidently delivering their material, handling objections, and effectively enrolling participants. Traditional training methods lack the dynamic, interactive feedback needed to refine presentation skills. To solve this, the Art of Living Intro Talk Mentor Bot is being developed: an AI-powered mobile application simulating realistic participant interactions with diverse objection scenarios. The bot provides real-time, personalized coaching and feedback during practice sessions, offering dynamic role-play to experiment with closing techniques. Data analytics track performance, identify improvement areas, and adapt training content to each user's needs. The goal is to empower presenters with a dynamic, personalized training tool, improving their delivery and increasing enrollment rates in Part 1 courses.",
         "solutions": "The Art of Living Intro Talk Mentor Bot is an AI-powered mobile application designed to:Simulate realistic participant interactions with diverse objection scenarios. Provide real-time, personalized coaching and feedback during practice sessions. Offer dynamic role-play experiences that allow presenters to experiment with various closing techniques.Use data analytics to track performance, identify improvement areas, and adapt training content to each user's needs.",
         "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
-        "rolesAvailable": [
-            "",
-            ""
-        ]
+        "rolesAvailable": "AI Scientists/Data Scientsts/ML Engineers, Back-End Engineers, Front-End Engineers UX Designers"
     },
     {
         "title": "Inner Peace AI",
         "team": "Rishi Tandon",
         "contact": " ",
-        "description": " Personalized Wellness through Wearable Intelligence.",
-        "problemstatement": "Who is affected? Tech-savvy American adults (ages 25–55) seeking personalized, evidence-based solutions for stress management, chronic health conditions (e.g., diabetes, hypertension), or spiritual growth. What are their specific pain points? Generic Guidance: Current meditation and breathwork apps (e.g., Calm, Headspace) use one-size-fits-all recommendations, ignoring real-time physiological data (e.g., heart rate variability, sleep quality) or emotional states. Example: A stressed user with elevated cortisol levels receives the same 5-minute breathing exercise as a well-rested user, leading to ineffective outcomes. Lack of Measurable Progress: Users cannot track tangible improvements in stress, focus, or chronic conditions (e.g., BP reduction), causing disengagement. Example: A diabetes patient spends weeks on generic guided meditations but sees no improvement in glucose levels. Misaligned Practices: Non-evidence-based or harmful recommendations from apps with superficial understanding of ancient techniques. Example: A user with hypertension is incorrectly advised to practice Bhastrika Pranayama (a vigorous breathwork technique), worsening their condition. Decision Fatigue: Overwhelmed by hundreds of uncurated practices (meditations, kriyas, courses) with no clarity on what works best for their unique needs.",
+        "tileDescription": "Personalized, evidence-based wellness—AI-driven breathwork & meditation tailored to your health, emotions, and real-time data for measurable results!",
+        "description": "Personalized, evidence-based wellness—AI-driven breathwork & meditation tailored to your health, emotions, and real-time data for measurable results!",
+        "problemstatement": "The project targets tech-savvy American adults (25-55) seeking personalized, evidence-based solutions for stress management, chronic conditions, and spiritual growth. These individuals are frustrated by generic meditation apps that ignore real-time physiological data and emotional states, leading to ineffective outcomes. They also struggle with a lack of measurable progress, potentially harmful recommendations, and decision fatigue from overwhelming uncurated practices. The solution is a platform providing personalized meditation and breathwork plans based on wearable data and user assessments. AI recommends techniques adapting to real-time stress, sleep, and heart rate variability, optimizing practice for focus, sleep, and stress relief. Personalized dashboards track health metrics, reinforcing habit formation. Advanced features include techniques, live sessions, and community for deeper engagement. The goal is to deliver effective, evidence-based, and personalized meditation experiences, empowering users to achieve tangible improvements in well-being.",
         "solutions": "Onboarding & Personalization Users connect wearables, complete an assessment, and receive a personalized meditation plan. Daily Adaptive Meditation & Breathwork AI recommends techniques based on real-time stress, sleep, and HRV data, ensuring optimal practice. Focus & Productivity Boost Users get pre-task breathwork recommendations for better concentration and deep work. Sleep Optimization AI suggests personalized wind-down routines and tracks improvements in sleep quality. Real-Time Stress Intervention Detects stress spikes and provides quick guided breathwork for immediate relief. Progress Tracking & Insights Personalized dashboards show the impact of meditation on health metrics,reinforcing habit formation. Advanced Practitioners & Community Offers advanced techniques, live sessions, and group challenges to deepen practice and engagement.",
         "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
-        "rolesAvailable": [
-            "",
-            ""
-        ]
+        "rolesAvailable": "AI Scientists/Data Scientsts/ML Engineers, Back-End Engineers"
     },
     {
         "title": "AI Marketing Assistant",
         "team": "Alisha Arora",
-        "contact": " ",
-        "description": "Ai assistant that understands the theme for art of living and generates flyers, video clips, social media content based on the instructions given to it.",
-        "problemstatement": "Organizers struggle to promote generate high quality marketing content for various themes and platforms. There is also conflicting promotions harboring at the same time. This assistant will keep Art of Living messaging at the core and be able to generate text, audio and video content for various platforms. The marketing should happen through a consolidated platform so that the conflicts are minimized across various themes and areas.",
+        "tileDescription": "AI assistant for Art of Living—instantly creating flyers, videos, and social media content tailored to your needs!",
+        "description": "AI assistant for Art of Living—instantly creating flyers, videos, and social media content tailored to your needs!",
+        "problemstatement": "Art of Living organizers face challenges in generating high-quality, engaging marketing content across diverse themes and platforms. Conflicting promotions and a lack of centralized messaging further complicate efforts. The project aims to create an AI-assisted marketing solution that streamlines content creation, ensures consistent branding, and consolidates marketing efforts. This platform will generate text, audio, and video content tailored to specific demographics and platforms, based on user instructions. It will also create user cohorts based on engagement, profiles, and feedback. By consolidating marketing through a single interface, the platform minimizes conflicts and enables targeted outreach, including post-lead generation email or in-app contact. The goal is to empower organizers with an efficient, AI-driven marketing tool to promote Art of Living effectively.",
         "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
-        "solutions": [
-            "Marketing content Ai assisted marketing content for various platforms that is generated based on instructions and the area,age group, etc.",
-            "User cohorting Create user cohorts based on the content they engage with, user profiles, time of engagement, needs and feedback.",
-            "Consolidation of marketing platform Marketing through single interface on the platform",
-            "Post lead generation email or app contact generation"
-        ],
-        "rolesAvailable": [
-            "",
-            ""
-        ]
+        "solutions":"",
+        "rolesAvailable": ""
     },
     {
         "title": "Swadhyaya",
         "team": "Parag Shah",
-        "description": "Life Personal Model for Daily Self Reflection.",
-        "problemstatement": "User is an Art of Living graduate. They need help with integrating knowledge (Mañana) in their daily life. Staying connected with knowledge helps increase retention (currently 7%) and promote regularity of Sadhana, Seva and Satsang, in addition to get a broader picture and witness-mode view of their life.",
+        "tileDescription": "Empowering Art of Living graduates to integrate wisdom daily—boosting retention, Sadhana, Seva, and Satsang for a deeper, connected life!",
+        "description": "Empowering Art of Living graduates to integrate wisdom daily—boosting retention, Sadhana, Seva, and Satsang for a deeper, connected life!",
+        "problemstatement": "Art of Living graduates often struggle to integrate the teachings (Jnana) into their daily lives, resulting in low knowledge retention and inconsistent engagement with Sadhana, Seva, and Satsang. This project aims to address this challenge by developing a smartphone app that acts as a personalized guide. The app features a \"Life Personal Model\" (LPM), trained on Gurudev's wisdom, which analyzes daily experiences to understand the user's mental state. This AI then provides personalized insights and recommendations, fostering a broader perspective and promoting consistent spiritual practice. Users can optionally integrate wearable data for deeper analysis. With user consent, the app listens to daily conversations and tracks emotions to further refine the LPM. All user data remains on the device, ensuring privacy. The goal is to facilitate seamless integration of Jnana into daily life, enhancing retention and promoting a more consistent and fulfilling spiritual practice.",
         "solutions": "An app on a smartphone that has 1. a Life Personal Model (based on a foundation model) that collects daily experiences and updates itself on the user's mental state daily and over longer periods. The model is trained/fine-tuned on Gurudev's knowledge from a selection of Q/A as well as knowledge series. 2. A server- side LPM model distribution service that keeps tracks and provides model updates to the device. 3. Optionally, a wearable device module that collects respiration, blood pressure and cardiac metrics to deeply analyze user state throughout the day. 4. Optional server side long-term storage for archiving user- experiences and generated knowledge, along with a reporting service.The user has to grant consent to the Life Personal Model to listen to their daily conversations when the user turns it on. It may also allow the model to collect conversation s over various social media apps, like WhatsApp, iMessage, SMS and phone calls. The user can also consent to sharing physiological data from wearables to track emotions. All user data stays on the device, so there is no privacy issue.",
         "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
-        "rolesAvailable": [
-            "",
-            ""
-        ]
+        "rolesAvailable": "AI Scientists/Data Scientsts/ML Engineers, Front-End Engineers, UX Designers,Product Manager (option)"
     },
     {
         "title": "Gurudev AI App",
         "team": "Jai Mallesh",
-        "description": "Unable to extract right knowledge point for given situation, unable to get targetted knowledge sheet on demand directly over voice, non availability of voice chat, text chat with Gurudev's library of knowledgep; Non availability of QnA where question is submitted and right knowledge response is provided with reference.",
-        "problemstatement": "",
+        "tileDescription": "Instant access to Gurudev’s wisdom—voice & text chat, on-demand knowledge sheets, and Q&A with precise answers, anytime!",
+        "description": "Instant access to Gurudev’s wisdom—voice & text chat, on-demand knowledge sheets, and Q&A with precise answers, anytime!",
+        "problemstatement": "The project addresses the difficulty users face in accessing specific and relevant knowledge from Gurudev's vast teachings. Currently, there's a lack of efficient tools for extracting the right knowledge point for a given situation, accessing targeted knowledge sheets on demand via voice, or engaging in voice/text chat directly with Gurudev's library. Users also lack a Q&A platform where questions are submitted and answered with precise knowledge responses and references. The solution is to provide easy access to Gurudev's knowledge through a text and voice-based chat interface. This aims to streamline information retrieval, making it easier for users to quickly find answers and guidance rooted in Gurudev's teachings, thereby deepening their understanding and application of the knowledge.",
         "solutions": "Easy access to vast knowledge of Gurudev over text chat and voice chat.",
         "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
-        "rolesAvailable": [
-            "",
-            ""
-        ]
+        "rolesAvailable": "AI Scientists/Data Scientsts/ML Engineers, Back-End Engineers, Front-End Engineers, UX Designers, Domain Experts (optional)"
     },
     {
         "title": "Uplaud AI volunteer agent (watsapp/ message)",
         "team": "Deepthi",
-        "description": "to acquire and convert word of mouth referral s from course participants over Whatsapp/Text Message",
-        "problemstatement": "Word of mouth is usually the source with the highest chance of conversion, especially when it comes to personal development and spirituality. I am more likely to say yes if something has been recommended by a trusted friend or family member. However, it is not easy to follow up on these word of mouth referrals as there isnt visibility. Every course participant gives feedback after the course. With Uplaud, we use AI to convert this feedback automatically into a word of mouth referral, and provide an easy way for the participants to share this with their friends over Whatsapp or Messaging. We also provide a way for AOL volunteers to reach out to these referrals/leads (maintainging their privacy and also opt out provided) to invite them to the AOL course.",
+        "tileDescription": "Turn course feedback into powerful word-of-mouth referrals via WhatsApp & text—seamless sharing, effortless conversion!",
+        "description": "Turn course feedback into powerful word-of-mouth referrals via WhatsApp & text—seamless sharing, effortless conversion!",
+        "problemstatement": "The project addresses the untapped potential of word-of-mouth referrals for Art of Living courses. While personal recommendations from trusted sources are highly effective, tracking and leveraging these referrals is currently challenging. To solve this, the project introduces Uplaud, an AI-powered platform that converts course participant feedback into shareable reviews. After completing a course, participants like Aarthi can easily share their experiences via a link that opens an Uplaud AI chatbot. This allows them to send a text or voice note, which is then transformed into a compelling review using AI. This review can then be easily shared with friends on platforms like WhatsApp. Art of Living volunteers can then view these shares and, maintaining privacy, reach out to potential leads to invite them to introductory courses. The platform also aims to automate this process with an AI Volunteer Agent, streamlining the entire referral system and maximizing course enrollment.",
         "solutions": "Aarthi graduated from the AOL Part 1 Course, and loved it. Right after the course, the volunteer requests her to share her experience of the course with her friends through a link that opens the Uplaud AI chatbot on Whatsapp or Text. Aarthi is able to send a text/voice note with her experience, which is converted to a shareable review using AI, and Aarthi can share this with her friends. As Aarthi shares this with her friends Tanmay and Prachi over whatsapp, the volunteer can see this information on the Uplaud dashboard. The volunteer can now reach out to these leads through Uplaud and invite them to an intro course. We can also automate this flow to be completely autonomous through AI Volunteer Agent.",
         "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
-        "rolesAvailable": [
-            "",
-            ""
-        ]
+        "rolesAvailable": "Front-End Engineers, UX Designers"
     },
     {
         "title": "The Voice of Oneness",
         "team": "Rajeswari Thangavelu",
-        "description": " ",
-        "problemstatement": "Gurudevs profound wisdom and guided meditations are currently available in English, Hindi, and several major Indian languages. However, to truly bring HIS knowledge to every corner of the world, we need tomake it accessible in as many languages as possible. Our vision is to develop an advanced AI-powered translation and voice synthesis solution that enables people across the globe to experience Gurudev’s teachings in their native language, in HIS own voice. This will create a deeper impact by preserving the authenticity and essence of his wisdom while removing language barriers. In the future, this AI solution will also facilitate real-time voice synthesis for live events, ensuring that Gurudev’s meditations and discourses can be broadcast in multiple languages simultaneously—without requiring him to give instructions in different languages. We aim to seamlessly integrate this AI-powered multilingual wisdom platform with the Sattva app, where users can select their preferred language and listen to Gurudev’s AI-generated voice, making his teachings universally accessible.This initiative will revolutionize how people connect with spiritual knowledge, fostering deeper inner peace and global harmony through technology.",
+        "tileDescription": "Breaking language barriers with AI—experience Gurudev’s wisdom in your native tongue, in his own voice, for a deeper global impact!",
+        "description": "Breaking language barriers with AI—experience Gurudev’s wisdom in your native tongue, in his own voice, for a deeper global impact!",
+        "problemstatement": "The project addresses the limited accessibility of Gurudev's teachings due to language barriers. While his wisdom and guided meditations are available in several languages, a significant portion of the world's population remains excluded. The goal is to develop an advanced AI-powered translation and voice synthesis solution to make Gurudev's teachings accessible in numerous languages, delivered in his own AI-generated voice. This includes converting existing texts (like \"Journey with the Master\") and meditations into multiple languages and enabling real-time audio translation for live events. Integrating this multilingual platform with the Sattva app will allow users to select their preferred language and experience Gurudev's wisdom authentically, fostering deeper inner peace and global harmony by revolutionizing access to spiritual knowledge.",
         "solutions": "1. Journey with in book is converted from text to Gurudev's AI Audio in major languages such as Mandarin,French, Spanish, Hindi and English. 2. Audio translation in Gurudev's AI voice on his meditation and wisdom series in Major languages 3. Live Audio translation of Gurudev's voice in Major languages to reach participants across the world",
         "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
-        "rolesAvailable": [
-            "",
-            ""
-        ]
+        "rolesAvailable": "AI Scientists/Data Scientsts/ML Engineers, Back-End Engineers, UX Designers"
     },
     {
         "title": "Achieving emotional resilience",
         "team": "Akshay Jain",
-        "description": " ",
-        "problemstatement": "- The product aims at resolving the increasing mental health challenges that individuals are facing worldwide. 23% of population globally experiences anxiety, sleep and depression. 44% of employees are stressed or experience burnout. Suicide is on the rise and is 2nd leading cause of death amongst 15 to 25 year olds in USA. Globally $ 1 Trillion is lost on account of low productivity due to mental health related issues. - The product aims are helping individuals in releasing stress, managing emotions.",
+        "tileDescription": "Bringing ancient Yoga & Ayurveda to modern audiences through personalized, gamified wellness for a resilient mind!",
+        "description": "Bringing ancient Yoga & Ayurveda to modern audiences through personalized, gamified wellness for a resilient mind!",
+        "problemstatement": "The product addresses the escalating global mental health crisis, with anxiety, sleep disorders, and depression affecting 23% of the population. Employee burnout and rising suicide rates, particularly among young adults, highlight the urgent need for effective solutions. The global economy loses an estimated $1 trillion annually due to mental health-related productivity issues. To combat this, the product offers a personalized and gamified approach to ancient wisdom of Yoga and Ayurveda, designed to build emotional resilience and improve overall mental well-being. By making these practices accessible and engaging for a modern audience, the product aims to help individuals release stress and effectively manage their emotions, ultimately fostering a healthier and more productive society.",
         "solutions": "The solution provides Ancient knowledge of Yoga, Ayurveda delivered in a personalized, gamified manner to a modern audiece. It aims at building emotional resilience and overall mental wellbeing of individuals",
         "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
-        "rolesAvailable": [
-            "",
-            ""
-        ]
+        "rolesAvailable": "Back-End Engineers, Front-End Engineers, UX Designer"
     },
     {
         "title": "AI for content generation",
         "team": "Prathima Maskeri",
+        "tileDescription": "Transform Gurudev’s wisdom into stunning flyers & reels—perfect for marketing & inspiring SKY Kids/Teens!",
         "description": "App that generates a flyer or a reel based on Gurudev’s wisdom. This can be used by teachers for marketing courses or used by SKY Kids/Teens teachers as a short stories to be shared with kids during course/follow-ups",
-        "problemstatement": "Teachers currently use the same template to advertise their course information on digital channels. This content may not capture users’ attention as it’s repetitive.",
+        "problemstatement": "Art of Living teachers currently rely on repetitive course templates for digital advertising, failing to capture user attention effectively. This project addresses this challenge by leveraging generative AI to create engaging, personalized marketing content based on Gurudev's teachings. Teachers can select a relevant knowledge point, such as \"Do not be a football of others' opinion,\" and the AI will generate a short video and accompanying text. This video might depict someone struggling to balance conflicting viewpoints, concluding with a call to action for a related Art of Living talk. The generated material, vetted by the teacher, can then be used and adapted by other teachers, creating a dynamic and effective library of marketing assets, and ultimately attracting more participants to courses. The project goal is to revolutionize course promotion through AI-powered, engaging, and shareable content.",
         "solutions": "Teachers and volunteers need a better way to market their courses, and genAI can help generate these quickly based on Gurudev’s knowledge points. For example, we can take a knowledge point like “Do not be a football of others’ opinion” and generate a short video showing a person trying to do several things based on opposing viewpoints from people around and the video can end with asking “Are you feel stressed trying to manage your priorities to satisfy everyone around you? Do you need to find a better way to manage your life? If yes, check out this free talk on <Date> and <time>. Click here to register”. Based on the prompt that the user <in this case a teacher> chooses, the material will be generated. It will be vetted by the user before being published. The output thus generated can be used in future by other teachers/volunteers as well.",
         "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
-        "rolesAvailable": [
-            "",
-            ""
-        ]
+        "rolesAvailable": "Back-End Engineers, Front-End Engineers"
     },
     {
         "title": "AI for techies",
         "team": "Shashin Sharan",
+        "tileDescription": "AI wellness hackathon—where meditation, breathwork, and tech unite for a healthier, focused life!",
         "description": "Hackathon in Universities",
-        "problemstatement": "The users are university students and industry professionals seeking innovative approaches to wellness and stress management. By integrating AI with meditation through themed hackathon events, the goal is to increase visibility and engagement with SKY Campus Clubs and the Art of Living, introducing participants to the benefits of breathwork and meditation.",
+        "problemstatement": "This project addresses the need to introduce university students and industry professionals to innovative wellness and stress management approaches. The goal is to increase visibility and engagement with SKY Campus Clubs and the Art of Living by hosting AI-themed wellness hackathons. Participants will develop AI-driven products integrating meditation and breathwork into daily life. The hackathon format provides direct exposure to SKY techniques, demonstrating their benefits for focus, productivity, and well-being. By fostering innovation in the wellness space, the project aims to attract a tech-savvy audience to breathwork and meditation, promoting both personal well-being and broader awareness of Art of Living’s offerings.",
         "solutions": "The proposed solution is an AI-themed wellness hackathon aimed at introducing university students and industry professionals to the benefits of meditation and breathwork. Participants will collaborate to develop AI-driven products and solutions that integrate these practices into everyday life. Throughout the event, attendees will be exposed to SKY Campus Clubs and the Art of Living, experiencing how these techniques can enhance focus, productivity, and overall well-being, while fostering innovation in the wellness space.",
         "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
-        "rolesAvailable": [
-            "",
-            ""
-        ]
+        "rolesAvailable": "UX Designers"
     },
     {
         "title": "AI for AOL Service Projects",
         "team": "Apoorva Acharya",
+        "tileDescription": "IAHV Chatbot: AI-powered guidance to discover & invest in your most heartfelt Art of Living impact story in minutes!",
         "description": "IAHV Chatbot to empower people to discover and invest in their most heartfelt Art of Living impact story, in minutes leveraging AI-driven personalized recommendations!",
-        "problemstatement": "Problem: Current visibility, marketing, and engagement efforts for the diverse Art of Living service projects across 180+ countries do not fully capitalize on the immense curiosity and interest these initiatives generate. Pain Points of Service Project Teams: • There are many projects in Art of living where service projects are happening in remote villages. Currently funds and volunteers for those projects are matched mostly through word of mouth. • Not all projects need to have heavy marketing needs/funds but need a donor.• Urgent requests of donations are often lost in the weeds and need word of mouth communications Pain points of Donors:• Today, there is one place to inform donors of all AOL service projects.• Often donor seeks to invest in the story that’s closer to their heart which is very hard to find. • Often donor inclines to donate to the organization that’s relevant to a particular location of interest example, their own hometown or village. Since globalization many have lost touch with what’s happening in their native places due to mere communication gap.",
+        "problemstatement": "The project addresses the challenge of maximizing visibility, marketing, and engagement for Art of Living's diverse service projects across 180+ countries. Current efforts fail to fully capitalize on the curiosity and interest these initiatives generate. Service project teams struggle with limited reach, relying on word-of-mouth, difficulty connecting with donors, and visibility for urgent donation requests. Donors, on the other hand, lack a centralized platform to discover projects aligned with their interests and often seek to invest in stories and locations close to their heart. The solution is an IAHV Chatbot-powered platform leveraging AI-driven personalized recommendations. This platform empowers users to discover and invest in impactful stories within minutes, while also enabling service project managers to create and launch targeted marketing campaigns. The goal is to streamline marketing, engagement, and donation efforts, connecting donors with projects and empowering service teams to expand their reach.",
         "solutions": "IAHV Chatbot to empower people to discover and invest in their most heartfelt Art of Living impact story, in minutes leveraging AI-driven personalized recommendations! Imagine a comprehensive platform that streamlines your marketing, engagement, and donation efforts in IAHV across global service projects. With a user-friendly interface and personalized chatbot, one can easily match the donor with the right project in minutes.Platform can also be extended for the service project managers to create and launch targeted marketing campaigns across multiple channels for service projects.",
         "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
-        "rolesAvailable": [
-            "",
-            ""
-        ]
+        "rolesAvailable": "AI Scientists/Data Scientsts/ML Engineers, Back-End Engineers, Front-End Engineers, UX Designers, Domain Expert"
     },
     {
         "title": "Website revamp",
         "team": "Alisha Arora",
+        "tileDescription": "AI conversational agent that guides users, answers queries, and connects them to the right content & teachers",
         "description": "AI conversational agent to the website that takes user inputs and helps them with queries, taking them to the right webpages, dynamically choose content to show and guide on connecting to teachers wherever necessary.",
-        "problemstatement": "Website today is very confusing and there is a lot on content that often leaves people confused. We need a solution that has clear direction and helps people decide.",
+        "problemstatement": "The Art of Living website currently suffers from a confusing layout and excessive content, leaving visitors unclear on how to proceed. This project aims to create a user-friendly experience that provides clear direction and facilitates informed decision-making. The solution involves integrating an AI-powered chatbot to answer visitor questions and guide them to relevant resources. Furthermore, the website will dynamically display content tailored to individual user interests, ensuring a personalized and engaging experience. To capture potential leads, the system will also offer an option for users to share their contact information for follow-up, thus optimizing engagement and conversion rates. The primary goal is to improve user navigation, provide personalized content, and capture leads through an AI-enhanced website experience.",
         "solutions": "New people who visit the art of living website will be able to enter what they are interested in and ask questions, AI bot will be able to answer questions and point to the right links for more information, website page can dynamical show content based on user’s interests. It can also capture the information of users if they would like more information or want to be contacted.",
         "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
-        "rolesAvailable": [
-            "",
-            ""
-        ]
+        "rolesAvailable": "Back-End Engineers, Front-End Engineers, UX Designers, Domain Expert (optional) , Product Manager (optional)"
     },
     {
         "title": "Vami",
         "team": "Prathima Maskeri",
-        "description": "A Gen AI chat bot in Sattva app that combines the essence of Gurudev’s teachings and wisdom to clear any practitioner doubts and help them in their spiritual journey.",
-        "problemstatement": "Beginners or students who have recently completed a Part 1 course or a Yoga course often struggle to establish a consistent practice. The benefits of the practice take time to become noticeable, which can lead to waning motivation. Daily distractions, life’s frustrations, and a lack of immediate progress are some of the demotivators that make it difficult to stay committed. Without easy access to guidance or a source of encouragement, practitioners may find it challenging to overcome doubts and build a lasting habit of regular practice.",
+        "tileDescription": "Gen AI chatbot in Sattva, infused with Gurudev’s wisdom, guiding practitioners on their spiritual journey",
+        "description": "a Gen AI chat bot in Sattva app that combines the essence of Gurudev’s teachings and wisdom to clear any practitioner doubts and help them in their spiritual journey.",
+        "problemstatement": "This project addresses the challenge faced by new Art of Living practitioners who struggle to establish a consistent spiritual practice after completing introductory courses. Waning motivation due to delayed benefits, daily distractions, and a lack of personalized guidance often leads to abandonment of the practice. To combat this, the project aims to integrate an AI-powered chatbot within the Sattva app, offering personalized and engaging guidance rooted in Gurudev's teachings. Leveraging Generative AI and Retrieval-Augmented Generation (RAG), the chatbot will answer questions, revisit course lessons, and provide motivation, drawing from a vast knowledge base of Gurudev's speeches and material. The chatbot will provide an intuitive, supportive, and conversational experience, acting as a trusted companion to help users navigate doubts, reinforce learning, and stay committed to their spiritual journey, ultimately fostering lasting habits of regular practice. The RAG technique also ensures the responsible and accurate handling of AOL's data.",
         "solutions": "The solution is a chatbot integrated within the Sattva app, designed to offer seekers personalized, engaging, and consistent spiritual guidance based on Gurudev’s teachings. Powered by Generative AI (Gen AI) and the Retrieval-Augmented Generation (RAG) technique, the chatbot will seamlessly interact with users, providing answers to their questions, revisiting key lessons from AOL courses, and motivating them to continue with their practice. The chatbot will have access to a wealth of knowledge from Gurudev's speeches, quotes, books, Q&A sessions, and course material, ensuring that each interaction is rooted in authentic, relevant content.The experience is designed to be intuitive and dynamic, allowing users to easily navigate through their doubts, reinforce what they’ve learned, and receive personalized advice or reminders to stay on track with their spiritual journey. The RAG technique will securely handle and protect AOL’s data, ensuring that all information is used responsibly and accurately. The chatbot will offer a conversational and supportive tone,making users feel like they have a trusted companion by their side at all times, helping them stay motivated and consistent in their practice.",
         "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
-        "rolesAvailable": [
-            "",
-            ""
-        ]
+        "rolesAvailable": "Back-End Engineers, Front-End Engineers"
     },
     {
         "title": "Multi-modal Personalized Content Recommendation Platform",
         "team": "Mahesh Gaikwad",
+        "tileDescription": "AI-powered multi-modal content recommendations for seekers, volunteers & AOL teachers!",
         "description": "for New People, Seekers, Volunteers, AOL Teachers.",
-        "problemstatement": "Personalized Recommendations for Seekers to deepen connection with Gurudev’s teaching: Build a personalized recommendation platform across AOL content to enhance participation from Part I to graduate courses by 50% through a cohesive spiritual journey. And motivate 25% of new app engaging in initial exploration to enroll in Part I Course. Additionally reduce the cognitive load in existing app (like Sattva) to suggest appropriate content (meditations, pranayamas, knowledge, Ayurveda, Wisdom, Courses) based on the seeker’s interests and progress while keeping the seeker engaged in local Sangha through discovery of long-kriya meetups & local Satsang community events.",
+        "problemstatement": "The project aims to deepen seekers' connection with Gurudev's teachings and enhance participation across Art of Living programs. Currently, seekers lack personalized guidance, leading to underutilization of available content and hindering progression through the curriculum. Additionally, existing apps like Sattva present a high cognitive load, making it difficult for users to find relevant content and engage with the local Sangha. The solution is to leverage AI/ML to transform the Art of Living app into a personalized guide, dynamically presenting tailored widgets based on individual needs, interests, and progress. New users might receive recommendations for improving focus or reducing stress, while others might discover curated playlists, wisdom nuggets, or local Sangha events. The goal is to increase participation in graduate courses by 50% and motivate 25% of new app users to enroll in Part I, all while reducing cognitive load and fostering a cohesive spiritual journey.",
         "solutions": "Imagine the Art of Living app (like Sattva) that serves as a personal guide, meeting each seeker where they are in their spiritual journey. Leveraging AI/ML, the app dynamically presents personalized widgets tailored to individual needs. For example, a student new to Part I courses might see recommendations for improving focus, reducing stress, or enhancing sleep, aligned with their goals and preferences. These widgets are modular and can be leveraged in apps or on the website - curated playlists of guided meditations, breathing exercises, Sudarshan Kriya guided session, wisdom nugget, Gurudev's talks, suggestions to connect with Sangha events like long-kriya meetups or Satsangs.",
         "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
-        "rolesAvailable": [
-            "",
-            ""
-        ]
+        "rolesAvailable": "AI Scientist/Data Scientst/ML Engineer , Back-End Engineer, Domain Expert (optional)"
     },
     {
         "title": "Guiding authentic storytelling on social media with AI-powered insights.",
         "team": "Divya Rashmi",
-        "description": " ",
-        "problemstatement": "Limited audience reach from individual pages within the larger Art of Living community, along with the need for guidance in content creation to share more consistently and effectively.",
+        "tileDescription": "AI-driven insights for authentic storytelling on social media!",
+        "description": "AI-driven insights for authentic storytelling on social media!",
+        "problemstatement": "This project addresses the limited audience reach and content creation challenges faced by individuals within the larger Art of Living community. Many struggle to consistently and effectively share their expertise on social media due to a lack of guidance and time-consuming content creation processes. To solve this, the project envisions an AI-powered assistant that simplifies social media engagement. This system suggests relevant topics and generates captions, hashtags, and content ideas, streamlining batch content creation and reducing effort by 70%. Public health professionals can seamlessly integrate SKY techniques into health-related posts, while data scientists can share insights alongside their wellness journeys, enhancing credibility and relatability. The core goal is to empower individuals to share their knowledge and personal experiences effortlessly, making every post more impactful, relevant, and consistent, ensuring more voices are heard authentically and effectively.",
         "solutions": "Imagine a world where sharing your expertise and passion on social media is as simple as having a conversation. Instead of spending hours thinking about what to post, which hashtags to use, or how to structure content, you have an AI-powered assistant that guides you. With our system, a public health professional can easily post about health topics while naturally integrating SKY techniques. A data scientist can share insights about their field along with their wellness journey, making their message both credible and relatable. Here’s how it works:✅ AI suggests topics and prompts based on your niche. ✅ It generates captions, hashtags, and content ideas in seconds. ✅ Batch content creation is streamlined, reducing effort by 70%—what took 10+ hours now takes just 3. ✅ Content stays authentic—AI assists, but human creativity drives the message. This system removes the stress of content creation, allowing people to focus on sharing their knowledge and personal experiences effortlessly. It’s not just about making posting easier; it’s about making every post more impactful, relevant, and consistent—so that more voices can be heard in a way that feels natural and aligned with their expertise.",
         "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
-        "rolesAvailable": [
-            "",
-            ""
-        ]
+        "rolesAvailable": "UX Designers"
     },
     {
         "title": "Amplify Marketing Studio",
         "team": "Abhishek Ratna",
-        "description": "Bring intelligent marketing automation to automate market research and content creation so every teacher and volunteer can attract and engage audiences effortlessly.",
-        "problemstatement": "Art of Living teachers and volunteers. Pains: 1. Lack marketing skills to systematically research local markets and create content/messaging that engages local audiences 2. Lack time and skills to create quality marketing content that can be distributed across marketing channels, and so they end up creating amateurish, poor content that doesn't convert. 3. Lack an understanding of best practices for different channels to create channel-appropriate content 4. Fail to generate leads and attract new audiences 5. Are stuck waiting for marketing resources to become available, and such resources are hard to find 6. Art of Living programs have a distinct tone of voice and Gurudev's wisdom must be reflected with dignity. Generic ChatGPT prompts cannot create this.",
+        "tileDescription": "Smart marketing automation for effortless research & content creation—helping teachers & volunteers engage with ease!",
+        "description": "bring intelligent marketing automation to automate market research and content creation so every teacher and volunteer can attract and engage audiences effortlessly.",
+        "problemstatement": "The project addresses the marketing challenges faced by Art of Living teachers and volunteers, who often lack the skills, time, and resources to effectively promote local programs. These challenges include a lack of marketing expertise, difficulty creating engaging content, poor understanding of channel-specific best practices, failure to generate leads, and limited access to marketing support. Existing solutions like generic ChatGPT prompts fail to capture the distinct tone of voice and wisdom associated with Art of Living. The project goal is to develop a \"one-click marketing studio\" that automates market research and content creation. By simply inputting a workshop URL, teachers and volunteers gain instant access to high-quality marketing materials and campaign assets optimized for various channels, enabling them to effortlessly attract and engage audiences.",
         "solutions": "One click marketing studio where teachers/volunteers simply input the URL of their workshop and instantly have access to high quality marketing collateral and campaign assets to use across multiple channels.",
         "joinLink": "https://forms.gle/BzZoNtKCU8oQp9hp8",
-        "rolesAvailable": [
-            "",
-            ""
-        ]
+        "rolesAvailable": "AI Scientists/Data Scientsts/ML Engineers, Back-End Engineers, Front-End Engineers, UX Designers"
     }
 
 ]
