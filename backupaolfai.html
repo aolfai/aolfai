@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Meet AI - The Art of Living Presents: AI Demo Day ✨💡</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+   
+   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    
+    
+    <style>
+       /* Base font settings */
+        body {
+            font-family: 'Work Sans', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6, .font-serif {
+            font-family: 'Lora', serif;
+        }
+
+         /* Password protection styles */
+         #password-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #password-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 90%;
+            width: 400px;
+        }
+
+        .content-hidden {
+            display: none;
+        }
+
+    
+    
+        /* Previous styles */
+        .gradient-bg {
+            background: linear-gradient(#FEF7E3, #FFFAED 0%, #FFFBF2 100%);
+        }
+        
+        /* Added modal and project tile styles */
+        .project-tile {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            border-radius: 12px;
+            padding: 30px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow-y: auto;
+        }
+
+        .modal-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: #666;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .hero-bg {
+            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url('https://github.com/aolfai/aolfai/blob/main/gurudevai-bgk.png?raw=true');
+            background-size: cover;
+            background-position: center;
+           /* background-attachment:fixed;*/
+        }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            /*-webkit-backdrop-filter: blur(10px);*/
+        }
+        
+        .event-date {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .bg-blue-600{
+        	background-color:#FF7E00;
+        }
+
+        /*Add this CSS to format text in modal window*/
+    const additionalStyles = `
+    .modal-section-content h3 {
+        color: #2c3e50;
+        margin: 20px 0 10px 0;
+        font-size: 1.3rem;
+    }
+
+    .modal-section-content ul, 
+    .modal-section-content ol {
+        margin-left: 20px;
+        margin-bottom: 15px;
+    }
+
+    .modal-section-content ul li, 
+    .modal-section-content ol li {
+        margin: 8px 0;
+        line-height: 1.4;
+    }
+
+    .modal-section-content ul ul, 
+    .modal-section-content ol ul {
+        margin-top: 5px;
+        margin-left: 20px;
+    }
+
+    .modal-section-content strong {
+        color: #34495e;
+    }
+
+    .modal-section-content p {
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+    .glass-nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .beige-bg {
+            background-color: #FFFBEF;
+        }
+
+        /* Desktop styles */
+        @media (min-width: 768px) {
+            .hero-bg {
+                
+                background-size: cover;
+                background-position: right 80px;
+                min-height: calc(100vh + 80px);
+                padding-top: 10px;
+            }
+        }
+
+        /* Mobile styles */
+        @media (max-width: 767px) {
+            .hero-bg {
+                
+                background-size: contain;
+                background-position: center 120px;
+                background-repeat: no-repeat;
+                background-color: black;
+                min-height: 100vh;
+                padding-top: 30vh;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+     <!-- Password Protection Overlay -->
+     <div id="password-overlay">
+        <div id="password-box" class="shadow-lg">
+            <img src="https://www.artofliving.org/img/ic-logo.svg" alt="Logo" class="h-16 mx-auto mb-6">
+            <h2 class="text-2xl font-bold mb-4">Welcome to AI Demo Day</h2>
+            <p class="text-gray-600 mb-6">Please enter the password to continue</p>
+            <input type="password" id="password-input" class="w-full px-4 py-2 border rounded mb-4 focus:outline-none focus:border-blue-500" placeholder="Enter password">
+            <button onclick="checkPassword()" class="w-full bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors">Enter</button>
+            <p id="error-message" class="text-red-500 mt-2 hidden">Incorrect password. Please try again.</p>
+        </div>
+    </div>
+
+
+     <!-- Simplified Header -->
+
+     <div id="main-content" class="content-hidden">
+     <header class="fixed w-full z-50">
+        <nav class="beige-bg py-3 shadow-sm">
+            <div class="container mx-auto px-6">
+                <div class="flex items-center justify-between">
+                    <div class="flex-1 text-center">
+                        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 tracking-tight">
+                            Art of Living<br><span class="text-lg">AI Demo Day</span>
+                        </h1>
+                    </div>
+                    
+                    <!-- Optional: Contact button aligned to right -->
+                    <div class="hidden md:block">
+                        <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
+                            Contact
+                        </a>
+			   <!-- <button onclick="logout()" class="btn btn-danger">Logout</button>-->
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+     <!-- Header -->
+    <!-- <header class="fixed w-full z-50">
+        <nav class="glass-nav py-4">
+            <div class="container mx-auto px-6">-->
+                <!-- Mobile: Center logo and text -->
+                <!--<div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <img src="https://www.artofliving.org/img/ic-logo.svg" alt="Logo" class="h-16 md:h-12 mb-2 md:mb-0">
+                        <span class="text-white font-bold text-xl md:ml-3">AI Meets AI</span>
+                    </div>
+                    
+                    <div class="hidden md:flex items-center space-x-8 mt-4 md:mt-0">
+                        <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">Contact</a>
+                    </div>
+                    
+                    <button class="md:hidden absolute right-6 top-6 text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+     <!-- Header -->
+   <!--  <header class="fixed w-full z-50">
+        <nav class="glass-nav py-4">
+            <div class="container mx-auto px-6 flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="https://www.artofliving.org/img/ic-logo.svg" alt="Logo" class="h-30 w-30">
+                    <span class="ml-3 text-white font-bold text-xl">AI Meets AI</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                   <!-- <a href="#" class="text-white hover:text-blue-200 transition-colors">Home</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition-colors">Schedule</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition-colors">Speakers</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition-colors">Sponsors</a>-->
+                <!--    <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">Contact</a>
+                </div>
+                
+                <button class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>-->
+
+    <!-- Hero Section -->
+   <!-- <section class="hero-bg min-h-screen flex items-center">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl">
+                <h1 class="text-6xl font-bold text-white mb-4">AI Meet AI</h1>
+                <!--<div class="event-date mb-8">
+                    <p class="text-3xl text-blue-300 font-light">May 13-14, 2025</p>
+                    <p class="text-xl text-gray-300 mt-2">Seattle, WA</p>
+                </div>-->
+              <!--  <p class="text-xl text-gray-200 mb-8">Step Into the Future of Transformation ✨ A Day of Innovation, Insight & Inner Connection through AI</p>
+                <a href="#ideas" class="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors inline-block">Join the team</a>
+            </div>
+        </div>
+    </section>-->
+
+
+   
+
+
+
+    <!-- Header Section -->
+    <!--<header class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <img src="/api/placeholder/300/200" alt="Left Event Image" class="rounded-lg shadow-lg mb-4 md:mb-0">
+                <div class="text-center md:mx-8">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">TechnovateX 2025</h1>
+                    <p class="text-xl mb-2">March 15-16, 2025</p>
+                    <p class="text-xl">Silicon Valley Convention Center</p>
+                </div>
+                <img src="/api/placeholder/300/200" alt="Right Event Image" class="rounded-lg shadow-lg mt-4 md:mt-0">
+            </div>
+        </div>
+    </header>-->
+
+    <!-- About Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <!--<h2 class="text-3xl font-bold mb-8 text-center">AI Demo Day</h2>-->
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                <div id="ideas"></div> <!--Art of Living Presents <br>AI Demo Day --><br><br><br>
+
+<p>Join us for a transformative journey where technology meets well-being! The AI Demo Day unites passionate minds to create AI-driven solutions to address pain points in Art of Living including supporting teachers, lead generation, handling misinformation, better recommendations of AOL content, and more!</p><br>
+
+<p>From intelligent chatbots, Social Media for good AI agents, to AI Teacher assistants and more, let’s harness AI to accelerate the impact of Art of Living for everyone 🚀</p><br>
+
+<p>Be part of the movement shaping the future of mental health through AI-driven innovation!<br>
+
+            </p>
+        </div>
+    </section>
+
+    <!-- Project Ideas Section -->
+  
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Project Ideas</h2>
+            <div class="project-container"></div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-header">
+                <h1 id="modal-title" class="text-3xl font-bold mb-4"></h1>
+                <p class="text-lg mb-2">Team: <span id="modal-team"></span></p>
+                <!--<p class="text-lg mb-4">Lead: <span id="modal-lead"></span></p>-->
+            </div>
+            <div class="mb-6">
+                <h2 class="text-xl font-bold mb-2">Description</h2>
+                <p id="modal-description" class="text-gray-700"></p>
+            </div>
+            <div class="mb-6">
+                <h2 class="text-xl font-bold mb-2">Problem Statement</h2>
+                <p id="modal-details" class="text-gray-700"></p>
+            </div>
+            <div class="mb-6">
+                <h2 class="text-xl font-bold mb-2">Solutions</h2>
+                <p id="modal-solutions" class="text-gray-700"></p>
+            </div>
+            <a id="join-button" href="#" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors" target="_blank">Join the Team</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-beige py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">AI Meets AI</h3>
+                   <a name="ideas"> <p>Be part of the movement shaping the future of mental health through AI-driven innovation!
+
+                   </p></a>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="mailto:aol.aidemoday@gmail.com" class="hover:text-gray-300">Contact</a>
+                    <!--<a href="#" class="hover:text-gray-300">Register</a>
+                    <a href="#" class="hover:text-gray-300">Sponsors</a>-->
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script>
+    // Password Protection Script
+    const correctPassword = "GurudevAolAi2025"; // Change this to your desired password
+    
+    function checkPassword() {
+        const passwordInput = document.getElementById('password-input');
+        const errorMessage = document.getElementById('error-message');
+        const overlay = document.getElementById('password-overlay');
+        const mainContent = document.getElementById('main-content');
+        
+        if (passwordInput.value === correctPassword) {
+            overlay.style.display = 'none';
+            mainContent.classList.remove('content-hidden');
+            // Store in session storage so refresh doesn't require re-entry
+            sessionStorage.setItem('passwordEntered', 'true');
+        } else {
+            errorMessage.classList.remove('hidden');
+            passwordInput.value = '';
+        }
+    }
+
+	 function logout() {
+            sessionStorage.removeItem('passwordEntered');
+            document.getElementById('password-overlay').style.display = 'flex';
+            document.getElementById('main-content').classList.add('content-hidden');
+            document.getElementById('password-input').value = '';
+            document.getElementById('error-message').classList.add('hidden');
+        }
+
+    // Allow Enter key to submit
+    document.getElementById('password-input').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            checkPassword();
+        }
+    });
+
+    // Check if password was already entered in this session
+    window.onload = function() {
+        if (sessionStorage.getItem('passwordEntered') === 'true') {
+            document.getElementById('password-overlay').style.display = 'none';
+            document.getElementById('main-content').classList.remove('content-hidden');
+        }
+        displayProjects(); // Your existing onload function
+    };
+
+    // Projects Data and Functions
+
+    
+   
+        const projects = [
+
+            /*PROEJECT 1*/
+            {
+                title: "AI Volunteer: Student care through AI automation [Art of Living AI]",
+                team: "Apoorva Acharya,",
+                /*contact: " ",*/
+                description: "Our mission is to empower teachers with AI-driven automation and voice support, enabling them to efficiently engage with students, gain insights into their progress, and foster a supportive environment. By streamlining communication and providing a personalized experience, we aim to significantly enhance student care and overall engagement.By transforming the traditional engagement approach which is often one student at a time, teachers are empowered to reach multiple students simultaneously, achieving an order of magnitude increase in efficiency.",
+                solutions: " ",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8",
+
+                problemstatement: `
+            <div class="modal-section-content">
+                Users are AOL Teachers and beneficiaries are students that have at least completed Part 1 Course.
+                <strong>Pain Points</strong>
+                <ol>
+                    <li>1. Manual and time-consuming outreach: Teachers have to manually contact each student through phone calls or other methods, which becomes increasingly difficult as the number of students grows. This process becomes even more strenuous as the number of students grows and as the number of events/activities happening grows with time. </li>
+                    <li>2. Lack of visibility into student progress: Teachers do not have a system that provides insights into student progress and their journey, making it challenging to offer targeted support and guidance. For example, if the teacher would have known that their student had already done the Art of Living Part 2 Course, then the teacher can tailor the message and inspire him/her to do advanced courses like the Volunteer Training Program. </li>
+                    <li>3. Inefficient communication: The absence of an easy-to-use interface for drafting, reviewing, and sending messages to students leads to communication inefficiencies. With no visibility into student’s Art of Living journey today on what courses they have taken, teachers often send messages that might not interest or be relevant to them. </li>
+                    <li>4. Hard to use User interface: Today, the teacher often needs to use the computer and goes through several steps to achieve the task of sending messages.</li>
+                    <li>5. Low student retention: Inadequate engagement and support contribute to low student retention rates.</li>
+                    
+                </ol>
+            </div>
+        `,
+
+  
+            },
+
+            
+
+            /*PROEJECT 2*/
+
+            {
+                title: "Personal Branding Framework for Synergetic Diverse Outreach",
+                team: "Nisha Balani",
+                /*contact: " ",*/
+                description: "Agentic AI Assistant for Teacher Empowerment ",
+                problemstatement: "Art of Living Teachers globally that do not know how market and present themselves to well establish yoga businesses to build synergetic and sustainable relationships to grow new student pipeline with efficiency of time and effort and do this at scale",
+                solutions: " This advanced AI-powered agent is designed to support teachers in building a robust personal brand and streamlining their professional journey. Its capabilities include generating a personalized branding framework, such as an Art of Living Resume, tailored cover letters, concise biography summaries, and digital stationery like customized email signatures with integrated logos. The AI also offers actionable guidance on identifying high-quality, well-rated yoga studios nationwide,focusing on those whose mission aligns with promoting holistic mental well-being. It simplifies outreach by automatically generating professional and persuasive emails for initiating partnerships. These pitches can highlight the teacher’s ability to offer services such as weekly meditation sessions, Stress & Anxiety Protocols, or even the Art of Living courses when suitable.To maximize efficiency, the bot centrally manages the teacher’s schedule, preventing conflicts across multiple commitments, such as yoga studios, courses, and community meetups. Core Objective: Capitalize on the low-hanging fruit within yoga studios nationwide—spaces where audiences are already familiar with the value of the mind-body connection, are accustomed to paying for quality instruction, and are less constrained by rigid religious frameworks. This AI ensures teachers are legally protected through studio agreements while establishing them as credible meditation experts. The result is a sustainable and organic outreach model that generates diverse leads, raises mainstream awareness, and expands the teacher’s impact—all while minimizing the time and effort required for relationship-building and logistical coordination.",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+            
+             /*PROEJECT 3*/
+
+            {
+                title: "Datamukti",
+                team: "Keshav",
+                /*contact: " ",*/
+                description: "An Idea bank which allows for cross collaboration of individuals all across the organization leveraging Gen Ai Semantic Search / RAG functionalities for quick look up",
+                problemstatement: "Board Memembers (Key Decision Makers) - Can use this tool to find ideas proposed by individuals to solve key issues faced by the organization. Additionally it can also connect these key decision makers with the right people who could help to solve the said issue.",
+                solutions: "Essentially a Web App with a Search bar, where users can look up the work done by the organization. Think perplexity excpet for AOL specific content. A platform for collaboration.",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+            
+             /*PROEJECT 4*/
+
+            {
+                title: "Ai Teachers Assistant",
+                team: "Chinmaya Devaraj",
+                /*contact: " ",*/
+                description: "AI to  help teachers follow and support participants journey more seamlessly.",
+                problemstatement: "We are interested in solving on critical problem to help teachers follow and support participants journey more seamlessly. Continued engagement with past participants falls off in due time as we keep teaching courses. The existing way of communication with our sky graduates is through emails and WhatsApp groups. We don’t have an active and standardized way of tracking whether they are reading the messages or interacting through the app To solve this we need an AI assistant that can help teachers with a centralized communication. Ai assistant in the form of a chat interface will send info about upcoming courses, follow-ups, etc. It will also have personalized challenge or mentoring option so that existing sky graduates are mentored. It’s a chat-based interface that is personalized allowing teacher to monitor what is going on with all the participants and also have options for teacher to type and communicate with all existing participants.",
+                solutions: "",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+            
+            /*PROEJECT 5*/
+
+            {
+                title: "Art of Living Intro Talk Mentor Bot",
+                team: "Akshay Gaur",
+                /*contact: " ",*/
+                description: "An AI-powered mobile application designed to: Simulate realistic participant interactions with diverse objection scenarios",
+                problemstatement: "Presenters of the Art of Living Intro Talk face challenges in effectively delivering their material and confidently closing the talk to enroll participants into the Part 1 course. They often struggle with handling objections such as time constraints or cost concerns. Traditional training methods via Zoom calls with teachers lack the dynamic, interactive feedback necessary to refine these skills in real-world scenarios.",
+                solutions: "The Art of Living Intro Talk Mentor Bot is an AI-powered mobile application designed to:Simulate realistic participant interactions with diverse objection scenarios. Provide real-time, personalized coaching and feedback during practice sessions. Offer dynamic role-play experiences that allow presenters to experiment with various closing techniques.Use data analytics to track performance, identify improvement areas, and adapt training content to each user's needs.",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+            
+            /*PROEJECT 6*/
+
+            {
+                title: "Inner Peace AI",
+                team: "Rishi Tandon",
+                /*contact: " ",*/
+                description: " Personalized Wellness through Wearable Intelligence.",
+                problemstatement: "Who is affected? Tech-savvy American adults (ages 25–55) seeking personalized, evidence-based solutions for stress management, chronic health conditions (e.g., diabetes, hypertension), or spiritual growth. What are their specific pain points? Generic Guidance: Current meditation and breathwork apps (e.g., Calm, Headspace) use one-size-fits-all recommendations, ignoring real-time physiological data (e.g., heart rate variability, sleep quality) or emotional states. Example: A stressed user with elevated cortisol levels receives the same 5-minute breathing exercise as a well-rested user, leading to ineffective outcomes. Lack of Measurable Progress: Users cannot track tangible improvements in stress, focus, or chronic conditions (e.g., BP reduction), causing disengagement. Example: A diabetes patient spends weeks on generic guided meditations but sees no improvement in glucose levels. Misaligned Practices: Non-evidence-based or harmful recommendations from apps with superficial understanding of ancient techniques. Example: A user with hypertension is incorrectly advised to practice Bhastrika Pranayama (a vigorous breathwork technique), worsening their condition. Decision Fatigue: Overwhelmed by hundreds of uncurated practices (meditations, kriyas, courses) with no clarity on what works best for their unique needs.",
+                solutions: "Onboarding & Personalization Users connect wearables, complete an assessment, and receive a personalized meditation plan. Daily Adaptive Meditation & Breathwork AI recommends techniques based on real-time stress, sleep, and HRV data, ensuring optimal practice. Focus & Productivity Boost Users get pre-task breathwork recommendations for better concentration and deep work. Sleep Optimization AI suggests personalized wind-down routines and tracks improvements in sleep quality. Real-Time Stress Intervention Detects stress spikes and provides quick guided breathwork for immediate relief. Progress Tracking & Insights Personalized dashboards show the impact of meditation on health metrics,reinforcing habit formation. Advanced Practitioners & Community Offers advanced techniques, live sessions, and group challenges to deepen practice and engagement.",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+            
+            
+            /*PROEJECT 7*/
+
+            {
+                title: "AI Marketing Assistant",
+                team: "Alisha Arora",
+                /*contact: " ",*/
+                description: "Ai assistant that understands the theme for art of living and generates flyers, video clips, social media content based on the instructions given to it.",
+                problemstatement: "Organizers struggle to promote generate high quality marketing content for various themes and platforms. There is also conflicting promotions harboring at the same time. This assistant will keep Art of Living messaging at the core and be able to generate text, audio and video content for various platforms. The marketing should happen through a consolidated platform so that the conflicts are minimized across various themes and areas.",
+               joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8",
+                solutions: `
+            <div class="modal-section-content">
+                <ol>
+                    <li>Marketing content Ai assisted marketing content for various platforms that is generated based on instructions and the area,age group, etc </li>
+                    <li>User cohorting Create user cohorts based on the content they engage with, user profiles, time of engagement, needs and feedback</li>
+                    <li>Consolidation of marketing platform Marketing through single interface on the platform</li>
+                    <li>Post lead generation email or app contact generation</li>
+                    
+                </ol>
+            </div>
+        `,
+
+                
+            },
+            
+            
+            /*PROEJECT 8*/
+
+            {
+                title: "Swadhyaya",
+                team: "Parag Shah",
+                /*contact: " ",*/
+                description: "Life Personal Model for Daily Self Reflection.",
+                problemstatement: "User is an Art of Living graduate. They need help with integrating knowledge (Mañana) in their daily life. Staying connected with knowledge helps increase retention (currently 7%) and promote regularity of Sadhana, Seva and Satsang, in addition to get a broader picture and witness-mode view of their life.",
+solutions: "An app on a smartphone that has 1. a Life Personal Model (based on a foundation model) that collects daily experiences and updates itself on the user's mental state daily and over longer periods. The model is trained/fine-tuned on Gurudev's knowledge from a selection of Q/A as well as knowledge series. 2. A server- side LPM model distribution service that keeps tracks and provides model updates to the device. 3. Optionally, a wearable device module that collects respiration, blood pressure and cardiac metrics to deeply analyze user state throughout the day. 4. Optional server side long-term storage for archiving user- experiences and generated knowledge, along with a reporting service.The user has to grant consent to the Life Personal Model to listen to their daily conversations when the user turns it on. It may also allow the model to collect conversation s over various social media apps, like WhatsApp, iMessage, SMS and phone calls. The user can also consent to sharing physiological data from wearables to track emotions. All user data stays on the device, so there is no privacy issue.",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+            
+            
+            /*PROEJECT 9*/
+
+            {
+                title: "Gurudev AI App",
+                team: "Jai Mallesh",
+                /*contact: " ",*/
+                
+                description: "Unable to extract right knowledge point for given situation, unable to get targetted knowledge sheet on demand directly over voice, non availability of voice chat, text chat with Gurudev's library of knowledgep; Non availability of QnA where question is submitted and right knowledge response is provided with reference.",
+problemstatement: "",
+solutions: "Easy access to vast knowledge of Gurudev over text chat and voice chat.",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+            
+            /*PROEJECT 10*/
+
+            {
+                title: "Uplaud AI volunteer agent (watsapp/ message)",
+                team: "Deepthi",
+                /*contact: " ",*/
+				description:"to acquire and convert word of mouth referral s from course participants over Whatsapp/Text Message",
+                problemstatement: "Word of mouth is usually the source with the highest chance of conversion, especially when it comes to personal development and spirituality. I am more likely to say yes if something has been recommended by a trusted friend or family member. However, it is not easy to follow up on these word of mouth referrals as there isnt visibility. Every course participant gives feedback after the course. With Uplaud, we use AI to convert this feedback automatically into a word of mouth referral, and provide an easy way for the participants to share this with their friends over Whatsapp or Messaging. We also provide a way for AOL volunteers to reach out to these referrals/leads (maintainging their privacy and also opt out provided) to invite them to the AOL course.",
+                
+solutions: "Aarthi graduated from the AOL Part 1 Course, and loved it. Right after the course, the volunteer requests her to share her experience of the course with her friends through a link that opens the Uplaud AI chatbot on Whatsapp or Text. Aarthi is able to send a text/voice note with her experience, which is converted to a shareable review using AI, and Aarthi can share this with her friends. As Aarthi shares this with her friends Tanmay and Prachi over whatsapp, the volunteer can see this information on the Uplaud dashboard. The volunteer can now reach out to these leads through Uplaud and invite them to an intro course. We can also automate this flow to be completely autonomous through AI Volunteer Agent.",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+            
+            
+            /*PROEJECT 11*/
+
+            {
+                title: "The Voice of Oneness",
+                team: "Rajeswari Thangavelu",
+                /*contact: " ",*/
+				description:" ",
+                problemstatement: "Gurudevs profound wisdom and guided meditations are currently available in English, Hindi, and several major Indian languages. However, to truly bring HIS knowledge to every corner of the world, we need tomake it accessible in as many languages as possible. Our vision is to develop an advanced AI-powered translation and voice synthesis solution that enables people across the globe to experience Gurudev’s teachings in their native language, in HIS own voice. This will create a deeper impact by preserving the authenticity and essence of his wisdom while removing language barriers. In the future, this AI solution will also facilitate real-time voice synthesis for live events, ensuring that Gurudev’s meditations and discourses can be broadcast in multiple languages simultaneously—without requiring him to give instructions in different languages. We aim to seamlessly integrate this AI-powered multilingual wisdom platform with the Sattva app, where users can select their preferred language and listen to Gurudev’s AI-generated voice, making his teachings universally accessible.This initiative will revolutionize how people connect with spiritual knowledge, fostering deeper inner peace and global harmony through technology.",
+                
+solutions: "1. Journey with in book is converted from text to Gurudev's AI Audio in major languages such as Mandarin,French, Spanish, Hindi and English. 2. Audio translation in Gurudev's AI voice on his meditation and wisdom series in Major languages 3. Live Audio translation of Gurudev's voice in Major languages to reach participants across the world",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+            
+            /*PROEJECT 12*/
+
+            {
+                title: "Achieving emotional resilience",
+                team: "Akshay Jain",
+                /*contact: " ",*/
+				description:" ",
+                problemstatement: "- The product aims at resolving the increasing mental health challenges that individuals are facing worldwide. 23% of population globally experiences anxiety, sleep and depression. 44% of employees are stressed or experience burnout. Suicide is on the rise and is 2nd leading cause of death amongst 15 to 25 year olds in USA. Globally $ 1 Trillion is lost on account of low productivity due to mental health related issues. - The product aims are helping individuals in releasing stress, managing emotions.",
+                
+solutions: "The solution provides Ancient knowledge of Yoga, Ayurveda delivered in a personalized, gamified manner to a modern audiece. It aims at building emotional resilience and overall mental wellbeing of individuals",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+            
+            /*PROEJECT 13*/
+
+            {
+                title: "AI for content generation",
+                team: "Prathima Maskeri",
+                /*contact: " ",*/
+				description:"App that generates a flyer or a reel based on Gurudev’s wisdom. This can be used by teachers for marketing courses or used by SKY Kids/Teens teachers as a short stories to be shared with kids during course/follow-ups",
+                problemstatement: "Teachers currently use the same template to advertise their course information on digital channels. This content may not capture users’ attention as it’s repetitive.",
+                
+solutions: "Teachers and volunteers need a better way to market their courses, and genAI can help generate these quickly based on Gurudev’s knowledge points. For example, we can take a knowledge point like “Do not be a football of others’ opinion” and generate a short video showing a person trying to do several things based on opposing viewpoints from people around and the video can end with asking “Are you feel stressed trying to manage your priorities to satisfy everyone around you? Do you need to find a better way to manage your life? If yes, check out this free talk on <Date> and <time>. Click here to register”. Based on the prompt that the user <in this case a teacher> chooses, the material will be generated. It will be vetted by the user before being published. The output thus generated can be used in future by other teachers/volunteers as well.",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+            
+            /*PROEJECT 14*/
+
+            {
+                title: "AI for techies",
+                team: "Shashin Sharan",
+                /*contact: " ",*/
+				description:"Hackathon in Universities",
+                problemstatement: "The users are university students and industry professionals seeking innovative approaches to wellness and stress management. By integrating AI with meditation through themed hackathon events, the goal is to increase visibility and engagement with SKY Campus Clubs and the Art of Living, introducing participants to the benefits of breathwork and meditation.",
+                
+solutions: "The proposed solution is an AI-themed wellness hackathon aimed at introducing university students and industry professionals to the benefits of meditation and breathwork. Participants will collaborate to develop AI-driven products and solutions that integrate these practices into everyday life. Throughout the event, attendees will be exposed to SKY Campus Clubs and the Art of Living, experiencing how these techniques can enhance focus, productivity, and overall well-being, while fostering innovation in the wellness space.",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+            
+            
+            /*PROEJECT 15*/
+
+            {
+                title: "AI for AOL Service Projects",
+                team: "Apoorva Acharya",
+                /*contact: " ",*/
+				description:"IAHV Chatbot to empower people to discover and invest in their most heartfelt Art of Living impact story, in minutes leveraging AI-driven personalized recommendations!",
+                problemstatement: "Problem: Current visibility, marketing, and engagement efforts for the diverse Art of Living service projects across 180+ countries do not fully capitalize on the immense curiosity and interest these initiatives generate. Pain Points of Service Project Teams: • There are many projects in Art of living where service projects are happening in remote villages. Currently funds and volunteers for those projects are matched mostly through word of mouth. • Not all projects need to have heavy marketing needs/funds but need a donor.• Urgent requests of donations are often lost in the weeds and need word of mouth communications Pain points of Donors:• Today, there is one place to inform donors of all AOL service projects.• Often donor seeks to invest in the story that’s closer to their heart which is very hard to find. • Often donor inclines to donate to the organization that’s relevant to a particular location of interest example, their own hometown or village. Since globalization many have lost touch with what’s happening in their native places due to mere communication gap.",
+                
+solutions: "IAHV Chatbot to empower people to discover and invest in their most heartfelt Art of Living impact story, in minutes leveraging AI-driven personalized recommendations! Imagine a comprehensive platform that streamlines your marketing, engagement, and donation efforts in IAHV across global service projects. With a user-friendly interface and personalized chatbot, one can easily match the donor with the right project in minutes.Platform can also be extended for the service project managers to create and launch targeted marketing campaigns across multiple channels for service projects.",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+            
+            
+             /*PROEJECT 16*/
+
+            {
+                title: "Website revamp",
+                team: "Alisha Arora",
+                /*contact: " ",*/
+				description:"AI conversational agent to the website that takes user inputs and helps them with queries, taking them to the right webpages, dynamically choose content to show and guide on connecting to teachers wherever necessary.",
+                problemstatement: "Website today is very confusing and there is a lot on content that often leaves people confused. We need a solution that has clear direction and helps people decide.",
+                
+solutions: "New people who visit the art of living website will be able to enter what they are interested in and ask questions, AI bot will be able to answer questions and point to the right links for more information, website page can dynamical show content based on user’s interests. It can also capture the information of users if they would like more information or want to be contacted.",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+            
+              /*PROEJECT 17*/
+
+            {
+                title: "Vami",
+                team: "Prathima Maskeri",
+                /*contact: " ",*/
+				description:"A Gen AI chat bot in Sattva app that combines the essence of Gurudev’s teachings and wisdom to clear any practitioner doubts and help them in their spiritual journey.",
+                problemstatement: "Beginners or students who have recently completed a Part 1 course or a Yoga course often struggle to establish a consistent practice. The benefits of the practice take time to become noticeable, which can lead to waning motivation. Daily distractions, life’s frustrations, and a lack of immediate progress are some of the demotivators that make it difficult to stay committed. Without easy access to guidance or a source of encouragement, practitioners may find it challenging to overcome doubts and build a lasting habit of regular practice.",
+                
+solutions: "The solution is a chatbot integrated within the Sattva app, designed to offer seekers personalized, engaging, and consistent spiritual guidance based on Gurudev’s teachings. Powered by Generative AI (Gen AI) and the Retrieval-Augmented Generation (RAG) technique, the chatbot will seamlessly interact with users, providing answers to their questions, revisiting key lessons from AOL courses, and motivating them to continue with their practice. The chatbot will have access to a wealth of knowledge from Gurudev's speeches, quotes, books, Q&A sessions, and course material, ensuring that each interaction is rooted in authentic, relevant content.The experience is designed to be intuitive and dynamic, allowing users to easily navigate through their doubts, reinforce what they’ve learned, and receive personalized advice or reminders to stay on track with their spiritual journey. The RAG technique will securely handle and protect AOL’s data, ensuring that all information is used responsibly and accurately. The chatbot will offer a conversational and supportive tone,making users feel like they have a trusted companion by their side at all times, helping them stay motivated and consistent in their practice.",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+
+
+			 /*PROEJECT 18*/
+
+            {
+                title: "Multi-modal Personalized Content Recommendation Platform",
+                team: "Mahesh Gaikwad",
+                /*contact: " ",*/
+				description:"for New People, Seekers, Volunteers, AOL Teachers.",
+                problemstatement: "Personalized Recommendations for Seekers to deepen connection with Gurudev’s teaching: Build a personalized recommendation platform across AOL content to enhance participation from Part I to graduate courses by 50% through a cohesive spiritual journey. And motivate 25% of new app engaging in initial exploration to enroll in Part I Course. Additionally reduce the cognitive load in existing app (like Sattva) to suggest appropriate content (meditations, pranayamas, knowledge, Ayurveda, Wisdom, Courses) based on the seeker’s interests and progress while keeping the seeker engaged in local Sangha through discovery of long-kriya meetups & local Satsang community events.",
+                
+solutions: "Imagine the Art of Living app (like Sattva) that serves as a personal guide, meeting each seeker where they are in their spiritual journey. Leveraging AI/ML, the app dynamically presents personalized widgets tailored to individual needs. For example, a student new to Part I courses might see recommendations for improving focus, reducing stress, or enhancing sleep, aligned with their goals and preferences. These widgets are modular and can be leveraged in apps or on the website - curated playlists of guided meditations, breathing exercises, Sudarshan Kriya guided session, wisdom nugget, Gurudev's talks, suggestions to connect with Sangha events like long-kriya meetups or Satsangs.",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+			
+            /*PROEJECT 19*/
+
+            {
+                title: "Guiding authentic storytelling on social media with AI-powered insights.",
+                team: "Divya Rashmi",
+                /*contact: " ",*/
+				description:" ",
+                problemstatement: "Limited audience reach from individual pages within the larger Art of Living community, along with the need for guidance in content creation to share more consistently and effectively.",
+                
+solutions: "Imagine a world where sharing your expertise and passion on social media is as simple as having a conversation. Instead of spending hours thinking about what to post, which hashtags to use, or how to structure content, you have an AI-powered assistant that guides you. With our system, a public health professional can easily post about health topics while naturally integrating SKY techniques. A data scientist can share insights about their field along with their wellness journey, making their message both credible and relatable. Here’s how it works:✅ AI suggests topics and prompts based on your niche. ✅ It generates captions, hashtags, and content ideas in seconds. ✅ Batch content creation is streamlined, reducing effort by 70%—what took 10+ hours now takes just 3. ✅ Content stays authentic—AI assists, but human creativity drives the message. This system removes the stress of content creation, allowing people to focus on sharing their knowledge and personal experiences effortlessly. It’s not just about making posting easier; it’s about making every post more impactful, relevant, and consistent—so that more voices can be heard in a way that feels natural and aligned with their expertise.",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+
+			/*PROEJECT 20*/
+
+            {
+                title: "Amplify Marketing Studio",
+                team: "Abhishek Ratna",
+                /*contact: " ",*/
+				description:"Bring intelligent marketing automation to automate market research and content creation so every teacher and volunteer can attract and engage audiences effortlessly.",
+                problemstatement: "Art of Living teachers and volunteers. Pains: 1. Lack marketing skills to systematically research local markets and create content/messaging that engages local audiences 2. Lack time and skills to create quality marketing content that can be distributed across marketing channels, and so they end up creating amateurish, poor content that doesn't convert. 3. Lack an understanding of best practices for different channels to create channel-appropriate content 4. Fail to generate leads and attract new audiences 5. Are stuck waiting for marketing resources to become available, and such resources are hard to find 6. Art of Living programs have a distinct tone of voice and Gurudev's wisdom must be reflected with dignity. Generic ChatGPT prompts cannot create this.",
+                
+solutions: "One click marketing studio where teachers/volunteers simply input the URL of their workshop and instantly have access to high quality marketing collateral and campaign assets to use across multiple channels.",
+                joinLink: "https://forms.gle/BzZoNtKCU8oQp9hp8"
+            },
+
+
+
+        ];
+
+       
+        function displayProjects() {
+            const container = document.querySelector(".project-container");
+            container.innerHTML = "";
+            container.style.display = "grid";
+            container.style.gridTemplateColumns = "repeat(auto-fill, minmax(300px, 1fr))";
+            container.style.gap = "20px";
+            container.style.padding = "20px";
+
+            projects.forEach((project, index) => {
+                let projectTile = document.createElement("div");
+                projectTile.classList.add("project-tile");
+                projectTile.innerHTML = `
+                    <h3 class="text-xl font-bold mb-3">${project.title}</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">${project.description}</p>
+                    <button onclick="openModal(${index})" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">Learn More</button>
+                `;
+                container.appendChild(projectTile);
+            });
+        }
+
+        
+
+        function openModal(index) {
+            const project = projects[index];
+            document.getElementById("modal-title").textContent = project.title;
+            document.getElementById("modal-team").textContent = project.team;
+           /* document.getElementById("modal-lead").textContent = project.lead;*/
+            document.getElementById("modal-description").textContent = project.description;
+
+       
+
+            /*document.getElementById("modal-details").textContent = project.problemstatement;*/
+            document.getElementById("modal-details").innerHTML = project.problemstatement;
+            /*document.getElementById("modal-solutions").textContent = project.solutions;*/
+
+            document.getElementById("modal-solutions").innerHTML = project.solutions;
+            document.getElementById("join-button").href = project.joinLink;
+            document.getElementById("modal").style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        window.onclick = function(event) {
+            if (event.target === document.getElementById("modal")) {
+                closeModal();
+            }
+        };
+
+        window.onload = displayProjects;
+    </script>
+</body>
+</html>
