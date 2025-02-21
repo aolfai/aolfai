@@ -370,7 +370,7 @@
                     projectTile.innerHTML = `
                         <div class="project-content">
                             <h3 class="text-xl font-bold mb-3">${project.title}</h3>
-                            <p class="text-gray-600 mb-4 project-description">${project.description}</p>
+                            <p class="text-gray-600 mb-4 project-description">${project.tileDescription}</p>
                         </div>
                           <button onclick="openModal(${index})" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors mt-auto">
                             Learn More
@@ -401,10 +401,6 @@
                 <div class="mb-4">
                     <h3 class="text-xl font-bold mb-2">Problem Statement</h3>
                     <p>${project.problemstatement}</p>
-                </div>
-                <div class="mb-4">
-                    <h3 class="text-xl font-bold mb-2">Solutions</h3>
-                    <p>${project.solutions}</p>
                 </div>
                 <div class="mb-4">
                     <h3 class="text-xl font-bold mb-2">Available Roles</h3>
